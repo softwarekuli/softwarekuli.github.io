@@ -13,7 +13,7 @@
       
       
       <link rel="icon" href="../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -21,10 +21,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -935,129 +935,184 @@
 
 <p>&nbsp;</p>
 <p>
+
 <p>
+
 
 
 # <font color="#0D47A1"> <p style="text-align:center"> **Monitoring & Dashboard**
 
+
 # <font color="#0D47A1"> <p style="text-align:center">![image](./2.png)
 
 
+
 <p>
+
 <p>
+
 
 # <font color="#0D47A1"> <p style="text-align:start"> Table of Contents:
 
+
 1. High-level monitoring architecture and Flow diagram
+
+
 
 2. Purpose 
 
+
 3. Powerapps Monitoring 
+
 
 -   ​Metrics 
 
+
 -   ​Logs 
+
 
 -   ​Alerts  
 
+
 -   ​Dashboards  
+
 
 -   ​User activity metrics 
 
+
 -   ​App performance metrics 
+
 
 -   ​Data usage metrics 
 
+
 -   ​Flow and Power Automate metrics 
+
 
 -   ​Custom connector metrics  ​ 
 
+
 4. Azure Resources
+
 
 -   ​Virtual Machines  
 
+
 -   ​Azure App Service (Web Apps, Mobile Apps, API Apps) 
+
 
 -   ​Azure Storage (Blobs, Queues, Tables, Files) 
 
--   ​Azure Event Hubs 
 
 -   ​Azure Cosmos DB 
 
+
 -   App Registration
+
 
 -   App Configuration
 
+
 -   ​Azure Functions 
+
 
 -   ​Azure Active Directory 
 
+
 -   ​Azure Service Bus (Queues, Topics) 
+
 
 5. Azure DevOps
 
+
 -   ​Work item tracking metrics 
+
 
 -   ​Azure Devops repository metrics 
 
+
 -   ​Build metrics 
+
 
 -   ​Release metrics 
 
+
 -   ​Testplan metrics 
 
+
 -   ​Resource utilization metrics 
+
 
 -   ​Azure Artifacts 
 
 
-
 #**High-Level Monitoring Architecture**
+
 
 # <font color="#0D47A1"> <p style="text-align:center">![image](./3.png)
 
+
 #**High-Level Monitoring Flow Diagram**
+
 
 # <font color="#0D47A1"> <p style="text-align:center">![image](./6.png)
 
+
 #**Process to Send Notification For Azure Resources**
+
 
 # <font color="#0D47A1"> <p style="text-align:center">![image](./5.png)
 
+
 #**Purpose** 
+
 
 The purpose of monitoring PowerApps, Azure, and Azure DevOps using Azure Monitor or Insights is to gain insights into the performance, availability, and security of these critical systems and applications. Here are some specific benefits of using Azure Monitor or Insights for monitoring
  
 
+
 **​PowerApps Monitoring:** PowerApps is a low-code platform that enables users to create custom business applications without writing code. Monitoring PowerApps with Azure Monitor or Insights can help identify issues that could impact application performance, such as long response times or errors, and optimize app performance.
 
+
 **​Azure Monitoring:** Azure is a cloud computing platform that provides a wide range of services for building, deploying, and managing applications and services. Monitoring Azure services with Azure Monitor or Insights can help detect and troubleshoot issues across the entire stack, including virtual machines, containers, storage, and networking.
+
 
 **​Azure DevOps Monitoring:** Azure DevOps is a cloud-based service that provides tools for software development, testing, and deployment. Monitoring Azure DevOps with Azure Monitor or Insights can help ensure that DevOps processes are running smoothly, identify bottlenecks and optimize processes, and track deployment success rates.In general, using Azure Monitor or Insights for monitoring provides a centralized platform for collecting and analyzing data from multiple sources, enabling organizations to gain a holistic view of their systems and applications. By monitoring and analyzing this data, organizations can proactively identify and address issues before they become critical, optimize system performance and resource utilization, and ensure the reliability, security, and availability of their critical systems and applications.
 
 
 
+
 ​**Here are the Power Apps tenants and environments level monitoring supported by Azure Monitor**
+
 
 **Power Apps production and non-production environments**
 
+
 ​1. Power Apps portals 
 
+
 ​2. PowerApps Common Data Service (CDS) environments 
+
 
 
 #**Azure Monitor provides the following types of monitoring for PowerApps environments:**
 
 
+
 **​1. Metrics** - Azure Monitor collects metrics for various resources within a PowerApps environment, such as portal page views, CDS entities, and more. These metrics can be used to creat*e custom alerts and dashboards. 
+
 
 **2. Logs** - Azure Monitor can collect logs from various sources within a PowerApps environment, such as portal requests, audit logs, and more. These logs can be used for troubleshooting and analysis. 
 
+
 **​3. Alerts** - Azure Monitor can create alerts based on speciﬁc conditions in your PowerApps environment, such as when a portal page is unavailable or when a certain number of CDS requests fail.
+
 
 **4. Dashboards** - Azure Monitor can create custom dashboards that provide a visual representation of metrics and logs from your PowerApps environment. These dashboards can be customized to show the information that is most important. 
 
+
 **​Metrics for PowerApps:** 
+
 
 ​1. Portal page views - the number of views for each portal page. 
 
@@ -1914,7 +1969,7 @@ from the \"Alert rules\" section and clicking on the appropriate button.
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
     
   </body>
