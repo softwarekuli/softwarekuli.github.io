@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#monitoring-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1004,10 +1009,43 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Monitoring-Document
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Monitoring-Document
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents:
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1037,6 +1075,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents:
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1051,997 +1106,749 @@
                   
 
 
-  <h1>Monitoring-Document</h1>
-
-<p>&nbsp;</p>
-<p>
-
-<p>
-
-
-# <font color="#0D47A1"> <p style="text-align:center"> **Monitoring & Dashboard**
-
-
-# <font color="#0D47A1"> <p style="text-align:center">![image](./2.png)
-
-
-<p>
-
-<p>
-
-
-# <font color="#0D47A1"> <p style="text-align:start"> Table of Contents:
-
-
-1. High-level monitoring architecture and Flow diagram
-
-
-
-2. Purpose 
-
-
-3. Powerapps Monitoring 
-
-
--   ​Metrics 
-
-
--   ​Logs 
-
-
--   ​Alerts  
-
-
--   ​Dashboards  
-
-
--   ​User activity metrics 
-
-
--   ​App performance metrics 
-
-
--   ​Data usage metrics 
-
-
--   ​Flow and Power Automate metrics 
-
-
--   ​Custom connector metrics  ​ 
-
-
-4. Azure Resources
-
-
--   ​Virtual Machines  
-
-
--   ​Azure App Service (Web Apps, Mobile Apps, API Apps) 
-
-
--   ​Azure Storage (Blobs, Queues, Tables, Files) 
-
-
--   ​Azure Cosmos DB 
-
-
--   App Registration
-
-
--   App Configuration
-
-
--   ​Azure Functions 
-
-
--   ​Azure Active Directory 
-
-
--   ​Azure Service Bus (Queues, Topics) 
-
-
-5. Azure DevOps
-
-
--   ​Work item tracking metrics 
-
-
--   ​Azure Devops repository metrics 
-
-
--   ​Build metrics 
-
-
--   ​Release metrics 
-
-
--   ​Testplan metrics 
-
-
--   ​Resource utilization metrics 
-
-
--   ​Azure Artifacts 
-
-
-#**High-Level Monitoring Architecture**
-
-
-# <font color="#0D47A1"> <p style="text-align:center">![image](./3.png)
-
-
-#**High-Level Monitoring Flow Diagram**
-
-
-# <font color="#0D47A1"> <p style="text-align:center">![image](./6.png)
-
-
-#**Process to Send Notification For Azure Resources**
-
-
-# <font color="#0D47A1"> <p style="text-align:center">![image](./5.png)
-
-
-#**Purpose** 
-
-
-The purpose of monitoring PowerApps, Azure, and Azure DevOps using Azure Monitor or Insights is to gain insights into the performance, availability, and security of these critical systems and applications. Here are some specific benefits of using Azure Monitor or Insights for monitoring
- 
-
-
-**​PowerApps Monitoring:** PowerApps is a low-code platform that enables users to create custom business applications without writing code. Monitoring PowerApps with Azure Monitor or Insights can help identify issues that could impact application performance, such as long response times or errors, and optimize app performance.
-
-
-**​Azure Monitoring:** Azure is a cloud computing platform that provides a wide range of services for building, deploying, and managing applications and services. Monitoring Azure services with Azure Monitor or Insights can help detect and troubleshoot issues across the entire stack, including virtual machines, containers, storage, and networking.
-
-
-**​Azure DevOps Monitoring:** Azure DevOps is a cloud-based service that provides tools for software development, testing, and deployment. Monitoring Azure DevOps with Azure Monitor or Insights can help ensure that DevOps processes are running smoothly, identify bottlenecks and optimize processes, and track deployment success rates.In general, using Azure Monitor or Insights for monitoring provides a centralized platform for collecting and analyzing data from multiple sources, enabling organizations to gain a holistic view of their systems and applications. By monitoring and analyzing this data, organizations can proactively identify and address issues before they become critical, optimize system performance and resource utilization, and ensure the reliability, security, and availability of their critical systems and applications.
-
-
-
-
-​**Here are the Power Apps tenants and environments level monitoring supported by Azure Monitor**
-
-
-**Power Apps production and non-production environments**
-
-
-​1. Power Apps portals 
-
-
-​2. PowerApps Common Data Service (CDS) environments 
-
-
-
-#**Azure Monitor provides the following types of monitoring for PowerApps environments:**
-
-
-
-**​1. Metrics** - Azure Monitor collects metrics for various resources within a PowerApps environment, such as portal page views, CDS entities, and more. These metrics can be used to creat*e custom alerts and dashboards. 
-
-
-**2. Logs** - Azure Monitor can collect logs from various sources within a PowerApps environment, such as portal requests, audit logs, and more. These logs can be used for troubleshooting and analysis. 
-
-
-**​3. Alerts** - Azure Monitor can create alerts based on speciﬁc conditions in your PowerApps environment, such as when a portal page is unavailable or when a certain number of CDS requests fail.
-
-
-**4. Dashboards** - Azure Monitor can create custom dashboards that provide a visual representation of metrics and logs from your PowerApps environment. These dashboards can be customized to show the information that is most important. 
-
-
-**​Metrics for PowerApps:** 
-
-
-​1. Portal page views - the number of views for each portal page. 
-
-​2. Portal unique visitors - the number of unique visitors to a portal. 
-
-​3. Portal requests - the number of requests made to a portal. 
-
-​4. Portal response time - the time it takes for a portal to respond to a
-request. 
-
-​5. Portal user login failures - the number of failed login attempts by
-portal users. 
-
-​6. CDS entity reads - the number of times a CDS entity is read. 
-
-​7. CDS entity writes - the number of times a CDS entity is written to. 
-
-​8. CDS entity deletes - the number of times a CDS entity is deleted. 
-
-​9. CDS API calls - the number of API calls made to CDS. 
-
-​10. CDS failed requests - the number of failed requests made to CDS. 
-
-
-These metrics can be used to gain insights into the performance and usage of your PowerApps environment. You can use Azure Monitor to create custom alerts based on these metrics to be notiﬁed when certain thresholds are reached. You can also create custom dashboards to visualize these metrics and gain a better understanding of your PowerApps environment. 
-
-
-#**Azure Monitor and Azure Insights:** 
-
-**​User activity metrics** 
-
-​● Number of active users 
-
-● Active user trends over time 
-
-​● Number of unique sessions 
-
-​● Session duration and frequency 
-
-​● Popular apps and screen 
-
-
-**​App performance metrics** 
-
-​● App load times 
-
-​● App response times 
-
-​● App crashes and error rates 
-
-​● Resource utilization (CPU, memory, disk) 
-
-​● API call duration and frequency 
-
-
-**​Data usage metrics** 
-
-​● Number of data requests 
-
-​● Data request trends over time 
-
-​● Data request response times ​ 
-
-​● Data usage by app and user 
-
-​● Data usage by data source and entity 
-
-
-**​Flow and Power Automate metrics** 
-
-​● Number of successful and failed runs 
-
-​● Run duration and frequency 
-
-​● Flow response times 
-
-​● Number of triggers and actions 
-
-​● Flow and Power Automate errors and exceptions 
-
-
-**​Custom connector metrics** 
-
-​● Connector usage and adoption 
-
-​● Connector response times 
-
-​● Connector error rates 
-
-​● Custom connector performance metrics 
-
-​● Connector authorization and authentication metrics 
-
-​ 
-#**Azure Resources** 
-
-*​Here is a list of some of the metrics and data that can be monitored for each of the Azure resources using Azure Monitor*
-
-**​1. Virtual Machines**  
-
-​● CPU usage 
-
-​● Memory usage 
-
-​● Disk I/O 
-
-​● Network traﬃc 
-
-​● Disk space utilization 
-
-​● Disk read/write operations 
-
-​● Operating system performance counters 
-
-
-**2.Azure App Service (Web Apps, Mobile Apps, API Apps)** 
-
-​● Response time 
-
-​● CPU usage 
-
-​● Memory usage 
-
-​● HTTP status codes 
-
-​● Requests per second 
-
-​● Exceptions and errors 
-
-​● Performance counters from the underlying VM 
-
-​● Performance counters from the underlying VM3. 
-
-
-**​3. Azure Storage (Blobs, Queues, Tables, Files)** 
-
-​● Data ingress/egress 
-
-​● Transaction rates 
-
-​● Latency 
-
-​● Capacity and utilization 
-
-​● Availability 
-
-​● Failure events 
-
-
-​**​4. Azure Event Hubs** 
-
-​● Incoming events 
-
-​● Outgoing events 
-
-​● Incoming bytes 
-
-​● Incoming and outgoing rates 
-
-​● Connection errors 
-
-​● Availability 
-
-
-**5. Azure Cosmos DB** 
-
-​● Request units (RUs) 
-
-​● Storage usage 
-
-​● Availability 
-
-​● Throughput 
-
-​● Latency 
-
-​● Failed requests 
-
-
-**6. Azure App Registration**
-
-​● Authentication Latency: Measures the time it takes to authenticate a user or service principal with Azure AD.  
-
-● Failed Authentication Requests: Counts the number of failed authentication requests to Azure AD. 
-
-● Successful Authentication Requests: Counts the number of successful authentication requests to Azure AD. 
-
-● API Call Rate: Measures the number of API calls per minute or per hour.  
-
-● API Response Time: Measures the time it takes for an API request to return a response. 
-
-● Application Errors: Counts the number of application errors, including failed requests and exceptions.
-
-​● Memory Usage: Measures the amount of memory used by the application.  
-
-● CPU Usage: Measures the percentage of CPU usage by the application.
-
-​● Network Traffic: Measures the amount of inbound and outbound network traffic for the application.
-
-​● Response Time: Measures the time it takes for the application to respond to a request.
-
-**7. Azure App configuration**
-
-​● Configuration Changes: Counts the number of configuration changes made within a specified time period.
-
-​● Configuration Latency: Measures the time it takes to fetch or update a configuration setting.
-
-​● Connection Failures: Counts the number of failed connections to Azure App Configuration.
-
-​● Queries per Second: Measures the number of configuration queries per second.
-
-​● Key or Value Size: Measures the size of keys or values stored in Azure App Configuration.
-
-​● Throttled Requests: Counts the number of requests that have been throttled due to exceeding the service limits.
-
-​● Data Volume: Measures the amount of data stored in Azure App Configuration.
-
-​● Application Errors: Counts the number of application errors related to Azure App Configuration.
-
-​● Response Time: Measures the time it takes for Azure App Configuration to respond to a request.
-
-​● Throughput: Measures the number of requests per second processed by Azure App Configuration.
-
-
-**​7. Azure Functions** 
-
-​● Execution count 
-
-​● Execution duration 
-
-​● Failed invocations 
-
-​● CPU usage 
-
-​● Memory usage 
-
-​● Network traﬃc 
-
-
-**​8. Azure Active Directory** 
-
-​● Sign-ins and sign-outs 
-
-​● Authentication and authorization errors 
-
-​● Role assignments and changes 
-
-​● Directory object changes 
-
-
-**9. Azure Service Bus (Queues, Topics)** 
-
-​● Message ingress/egress 
-
-​● Queue/topic size and backlog 
-
-​● Active and dead-letter message counts 
-
-​● Connection errors 
-
-​● Availability 
-
-**10. Azure KeyVault**
-
-​● Secret Access Count: Counts the number of times a secret has been accessed within a specified time period.
-
-​● Key Access Count: Counts the number of times a key has been accessed within a specified time period.
-
-​● Certificate Access Count: Counts the number of times a certificate has been accessed within a specified time period.
-
-​● Encryption and Decryption Operations: Counts the number of encryption and decryption operations performed within a specified time period.
-
-​● Key Vault Latency: Measures the time it takes to fetch or update a secret, key, or certificate in Azure Key Vault.
-
-​● Failed Operations: Counts the number of failed operations within a specified time period.
-
-​● Network Traffic: Measures the amount of inbound and outbound network traffic for Azure Key Vault.
-
-​● Request Latency: Measures the time it takes for Azure Key Vault to respond to a request.
-
-​● Unauthorized Access Attempts: Counts the number of unauthorized access attempts to Azure Key Vault.
-
-​● Authentication Errors: Counts the number of authentication errors related to Azure Key Vault.
-
-
-#**​Azure DevOps Monitoring**  
-
-**​Work item tracking metrics** 
-
-​● Work item cycle time 
-
-​● Work item lead time 
-
-​● Work item backlog size 
-
-​● Work item completion rate 
-
-​● Bug resolution rates 
-
-​● Feature delivery rate 
-
-**Azure Devops repository metrics** 
-
-​● Number of commits 
-
-​● Number of pull requests 
-
-​● Merge success and failure rates 
-
-​● Merge times and durations 
-
-​● Number of branches and tags 
-
-​● Commit and merge frequency 
-
-**Build metrics** 
-
-​● Build success and failure rates 
-
-● Build times and durations 
-
-​● Queue time for builds 
-
-​● Average queue length 
-
-​● Number of builds in progress 
-
-​● Number of builds waiting in the queue 
-
-​● Number of builds triggered by branch or commit 
-
-​
-**​Release metrics** 
-
-​● Release success and failure rates 
-
-​● Release times and durations 
-
-​● Deployment frequency 
-
-​● Time to deploy 
-
-​● Average wait time for releases 
-
-​● Number of releases in progress 
-
-​● Number of releases waiting in the queue 
-
-**Testplan metrics** 
-
-● Test pass/fail rates 
-
-​● Test case coverage 
-
-​● Test execution times 
-
-​● Test result distribution 
-
-​● Test suite duration 
-
-
-**​Resource utilization metrics** 
-
-​● CPU and memory usage for Azure DevOps agents and build servers 
-
-​● Disk space usage 
-
-​● Network usage 
-
-​● Connection time and rate 
-
-**​Azure Artifacts** 
-
-​*Here is the Metrics related to Azure DevOps Artifacts that can be collected and analyzed using Azure Monitor and Insights*
-
-**​Package download metrics** 
-
-​● Number of package downloads 
-
-​● Package download rates 
-
-​● Average download size per package 
-
-​● Package download time 
-
-​● Top downloaders by IP address, user, or client 
-
-​
-**​Package publish metrics** 
-
-​● Number of package publishes 
-
-​● Package publish rates 
-
-​● Average publish size per package 
-
-​● Package publish time 
-
-​● Top publishers by IP address, user, or client 
-
-
-**Package retention metrics** 
-
-​● Number of packages retained 
-
-​● Retention rate 
-
-​● Retention time 
-
-​● Number of packages deleted 
-
-​● Deletion rates 
-
-​● Average time to deletion 
-
-
-**Package security metrics**  
-
-​● Vulnerability scan results 
-
-​● Security alerts and notiﬁcations 
-
-​● Number of packages with security issues 
-
-​● Package access and permission control 
-
-
-#Here are some alert threshold values for commonly monitored Azure resources:
-
-
-**Virtual Machines:**
-
-    • CPU Usage: Alert threshold could be set to 80% for a sustained period of time.
-
-    • Memory Usage: Alert threshold could be set to 80% for a sustained period of time.
-
-    • Disk Space Usage: Alert threshold could be set to 85% for a sustained period of time.
-
-    • Network Usage: Alert threshold could be set to 80% for a sustained period of time.
-
-    • Disk IOPS: Alert threshold could be set to 90% for a sustained period of time.
-
-**Azure App Service:**
-
-    • CPU Utilization: 80% for sustained periods of time
-
-    • Memory Utilization: 80% for sustained periods of time
-
-    • HTTP 5xx error rate: 5% for sustained periods of time
-
-    • HTTP 4xx error rate: 10% for sustained periods of time
-
-**Azure Storage:**
-
-    • Queue Length: 1,000 for more than 5 minutes
-
-    • Blob Capacity: 80% for sustained periods of time
-
-    • Transaction Rate: 80% for sustained periods of time
-
-    • Egress Bandwidth: 80% for sustained periods of time
-
-**Azure Functions:**
-
-    • Execution Count: 100,000 within an hour
-
-    • Average Execution Time: 5 seconds or greater
-
-    • Memory Usage: 70% for sustained periods of time
-
-    • Exception Count: 100 within an hour
-
-    • HTTP 5xx Error Rate: 5% for sustained periods of time
-
-**Azure App Configuration:**
-
-    • Configuration Changes: 10 configuration changes per hour
-
-    • Configuration Latency: 500 milliseconds for fetch or update operations
-
-    • Connection Failure: 5 connection failures per hour
-
-    • Queries per Second: 100 configuration queries per second
-
-    • Key or Value Size: Maximum key or value size of 1 MB
-
-**Azure Event Hubs:**
-
-    • Incoming Messages: Alert threshold could be set to a specific number or rate of messages within a defined time period, such as 100,000 messages in 1 hour.
-
-    • Outgoing Messages: Alert threshold could be set to a specific number or rate of messages within a defined time period, such as 50,000 messages in 30 minutes.
-
-    • Active Connections: Alert threshold could be set to a specific number of active connections, such as 500 connections.
-
-    • Throttled Requests: Alert threshold could be set to the number of requests that have been throttled, such as 500 requests in 1 hour.
-
-    • Latency: Alert threshold could be set to a specific response time or average latency value, such as 500ms response time for incoming messages.
-
-**Azure Active Directory**
-
-    • Failed Sign-In Attempts: Alert threshold could be set to a specific number of failed sign-in attempts within a defined time period, such as 10 failed attempts in 1 hour.
-
-    • Password Resets: Alert threshold could be set to the number of password resets within a defined time period, such as 50 resets in 24 hours.
-
-    • User Account Deletion: Alert threshold could be set to the number of user accounts deleted within a defined time period, such as 5 accounts in 1 day.
-
-    • Multi-Factor Authentication: Alert threshold could be set to the number of successful or unsuccessful MFA attempts, such as 100 successful or unsuccessful attempts in 1 hour.
-
-    • Directory Role Changes: Alert threshold could be set to the number of directory role changes, such as 10 changes in 1 hour.
-
-**Azure keyvault**
+<h1 id="monitoring-dashboard">Monitoring &amp; Dashboard</h1>
+<p><img alt="image" src="./2.png" /></p>
+<h2 id="table-of-contents">Table of Contents:</h2>
+<ol>
+<li>
+<p>High-level monitoring architecture and Flow diagram</p>
+</li>
+<li>
+<p>Purpose </p>
+</li>
+<li>
+<p>Powerapps Monitoring </p>
+</li>
+<li>
+<p>​Metrics </p>
+</li>
+<li>
+<p>​Logs </p>
+</li>
+<li>
+<p>​Alerts  </p>
+</li>
+<li>
+<p>​Dashboards  </p>
+</li>
+<li>
+<p>​User activity metrics </p>
+</li>
+<li>
+<p>​App performance metrics </p>
+</li>
+<li>
+<p>​Data usage metrics </p>
+</li>
+<li>
+<p>​Flow and Power Automate metrics </p>
+</li>
+<li>
+<p>​Custom connector metrics  ​ </p>
+</li>
+<li>
+<p>Azure Resources</p>
+</li>
+<li>
+<p>​Virtual Machines  </p>
+</li>
+<li>
+<p>​Azure App Service (Web Apps, Mobile Apps, API Apps) </p>
+</li>
+<li>
+<p>​Azure Storage (Blobs, Queues, Tables, Files) </p>
+</li>
+<li>
+<p>​Azure Cosmos DB </p>
+</li>
+<li>
+<p>App Registration</p>
+</li>
+<li>
+<p>App Configuration</p>
+</li>
+<li>
+<p>​Azure Functions </p>
+</li>
+<li>
+<p>​Azure Active Directory </p>
+</li>
+<li>
+<p>​Azure Service Bus (Queues, Topics) </p>
+</li>
+<li>
+<p>Azure DevOps</p>
+</li>
+<li>
+<p>​Work item tracking metrics </p>
+</li>
+<li>
+<p>​Azure Devops repository metrics </p>
+</li>
+<li>
+<p>​Build metrics </p>
+</li>
+<li>
+<p>​Release metrics </p>
+</li>
+<li>
+<p>​Testplan metrics </p>
+</li>
+<li>
+<p>​Resource utilization metrics </p>
+</li>
+<li>
+<p>​Azure Artifacts </p>
+</li>
+</ol>
+<h1 id="high-level-monitoring-architecture"><strong>High-Level Monitoring Architecture</strong></h1>
+<h1 id="_1"><font color="#0D47A1"> <p style="text-align:center"><img alt="image" src="./3.png" /></h1>
+<h1 id="high-level-monitoring-flow-diagram"><strong>High-Level Monitoring Flow Diagram</strong></h1>
+<h1 id="_2"><font color="#0D47A1"> <p style="text-align:center"><img alt="image" src="./6.png" /></h1>
+<h1 id="process-to-send-notification-for-azure-resources"><strong>Process to Send Notification For Azure Resources</strong></h1>
+<h1 id="_3"><font color="#0D47A1"> <p style="text-align:center"><img alt="image" src="./5.png" /></h1>
+<h1 id="purpose"><strong>Purpose</strong></h1>
+<p>The purpose of monitoring PowerApps, Azure, and Azure DevOps using Azure Monitor or Insights is to gain insights into the performance, availability, and security of these critical systems and applications. Here are some specific benefits of using Azure Monitor or Insights for monitoring
+ </p>
+<p><strong>​PowerApps Monitoring:</strong> PowerApps is a low-code platform that enables users to create custom business applications without writing code. Monitoring PowerApps with Azure Monitor or Insights can help identify issues that could impact application performance, such as long response times or errors, and optimize app performance.</p>
+<p><strong>​Azure Monitoring:</strong> Azure is a cloud computing platform that provides a wide range of services for building, deploying, and managing applications and services. Monitoring Azure services with Azure Monitor or Insights can help detect and troubleshoot issues across the entire stack, including virtual machines, containers, storage, and networking.</p>
+<p><strong>​Azure DevOps Monitoring:</strong> Azure DevOps is a cloud-based service that provides tools for software development, testing, and deployment. Monitoring Azure DevOps with Azure Monitor or Insights can help ensure that DevOps processes are running smoothly, identify bottlenecks and optimize processes, and track deployment success rates.In general, using Azure Monitor or Insights for monitoring provides a centralized platform for collecting and analyzing data from multiple sources, enabling organizations to gain a holistic view of their systems and applications. By monitoring and analyzing this data, organizations can proactively identify and address issues before they become critical, optimize system performance and resource utilization, and ensure the reliability, security, and availability of their critical systems and applications.</p>
+<p>​<strong>Here are the Power Apps tenants and environments level monitoring supported by Azure Monitor</strong></p>
+<p><strong>Power Apps production and non-production environments</strong></p>
+<p>​1. Power Apps portals </p>
+<p>​2. PowerApps Common Data Service (CDS) environments </p>
+<h1 id="azure-monitor-provides-the-following-types-of-monitoring-for-powerapps-environments"><strong>Azure Monitor provides the following types of monitoring for PowerApps environments:</strong></h1>
+<p><strong>​1. Metrics</strong> - Azure Monitor collects metrics for various resources within a PowerApps environment, such as portal page views, CDS entities, and more. These metrics can be used to creat*e custom alerts and dashboards. </p>
+<p><strong>2. Logs</strong> - Azure Monitor can collect logs from various sources within a PowerApps environment, such as portal requests, audit logs, and more. These logs can be used for troubleshooting and analysis. </p>
+<p><strong>​3. Alerts</strong> - Azure Monitor can create alerts based on speciﬁc conditions in your PowerApps environment, such as when a portal page is unavailable or when a certain number of CDS requests fail.</p>
+<p><strong>4. Dashboards</strong> - Azure Monitor can create custom dashboards that provide a visual representation of metrics and logs from your PowerApps environment. These dashboards can be customized to show the information that is most important. </p>
+<p><strong>​Metrics for PowerApps:</strong> </p>
+<p>​1. Portal page views - the number of views for each portal page. </p>
+<p>​2. Portal unique visitors - the number of unique visitors to a portal. </p>
+<p>​3. Portal requests - the number of requests made to a portal. </p>
+<p>​4. Portal response time - the time it takes for a portal to respond to a
+request. </p>
+<p>​5. Portal user login failures - the number of failed login attempts by
+portal users. </p>
+<p>​6. CDS entity reads - the number of times a CDS entity is read. </p>
+<p>​7. CDS entity writes - the number of times a CDS entity is written to. </p>
+<p>​8. CDS entity deletes - the number of times a CDS entity is deleted. </p>
+<p>​9. CDS API calls - the number of API calls made to CDS. </p>
+<p>​10. CDS failed requests - the number of failed requests made to CDS. </p>
+<p>These metrics can be used to gain insights into the performance and usage of your PowerApps environment. You can use Azure Monitor to create custom alerts based on these metrics to be notiﬁed when certain thresholds are reached. You can also create custom dashboards to visualize these metrics and gain a better understanding of your PowerApps environment. </p>
+<h1 id="azure-monitor-and-azure-insights"><strong>Azure Monitor and Azure Insights:</strong></h1>
+<p><strong>​User activity metrics</strong> </p>
+<p>​● Number of active users </p>
+<p>● Active user trends over time </p>
+<p>​● Number of unique sessions </p>
+<p>​● Session duration and frequency </p>
+<p>​● Popular apps and screen </p>
+<p><strong>​App performance metrics</strong> </p>
+<p>​● App load times </p>
+<p>​● App response times </p>
+<p>​● App crashes and error rates </p>
+<p>​● Resource utilization (CPU, memory, disk) </p>
+<p>​● API call duration and frequency </p>
+<p><strong>​Data usage metrics</strong> </p>
+<p>​● Number of data requests </p>
+<p>​● Data request trends over time </p>
+<p>​● Data request response times ​ </p>
+<p>​● Data usage by app and user </p>
+<p>​● Data usage by data source and entity </p>
+<p><strong>​Flow and Power Automate metrics</strong> </p>
+<p>​● Number of successful and failed runs </p>
+<p>​● Run duration and frequency </p>
+<p>​● Flow response times </p>
+<p>​● Number of triggers and actions </p>
+<p>​● Flow and Power Automate errors and exceptions </p>
+<p><strong>​Custom connector metrics</strong> </p>
+<p>​● Connector usage and adoption </p>
+<p>​● Connector response times </p>
+<p>​● Connector error rates </p>
+<p>​● Custom connector performance metrics </p>
+<p>​● Connector authorization and authentication metrics </p>
+<p>​ </p>
+<h1 id="azure-resources"><strong>Azure Resources</strong></h1>
+<p><em>​Here is a list of some of the metrics and data that can be monitored for each of the Azure resources using Azure Monitor</em></p>
+<p><strong>​1. Virtual Machines</strong>  </p>
+<p>​● CPU usage </p>
+<p>​● Memory usage </p>
+<p>​● Disk I/O </p>
+<p>​● Network traﬃc </p>
+<p>​● Disk space utilization </p>
+<p>​● Disk read/write operations </p>
+<p>​● Operating system performance counters </p>
+<p><strong>2.Azure App Service (Web Apps, Mobile Apps, API Apps)</strong> </p>
+<p>​● Response time </p>
+<p>​● CPU usage </p>
+<p>​● Memory usage </p>
+<p>​● HTTP status codes </p>
+<p>​● Requests per second </p>
+<p>​● Exceptions and errors </p>
+<p>​● Performance counters from the underlying VM </p>
+<p>​● Performance counters from the underlying VM3. </p>
+<p><strong>​3. Azure Storage (Blobs, Queues, Tables, Files)</strong> </p>
+<p>​● Data ingress/egress </p>
+<p>​● Transaction rates </p>
+<p>​● Latency </p>
+<p>​● Capacity and utilization </p>
+<p>​● Availability </p>
+<p>​● Failure events </p>
+<p>​<strong>​4. Azure Event Hubs</strong> </p>
+<p>​● Incoming events </p>
+<p>​● Outgoing events </p>
+<p>​● Incoming bytes </p>
+<p>​● Incoming and outgoing rates </p>
+<p>​● Connection errors </p>
+<p>​● Availability </p>
+<p><strong>5. Azure Cosmos DB</strong> </p>
+<p>​● Request units (RUs) </p>
+<p>​● Storage usage </p>
+<p>​● Availability </p>
+<p>​● Throughput </p>
+<p>​● Latency </p>
+<p>​● Failed requests </p>
+<p><strong>6. Azure App Registration</strong></p>
+<p>​● Authentication Latency: Measures the time it takes to authenticate a user or service principal with Azure AD.  </p>
+<p>● Failed Authentication Requests: Counts the number of failed authentication requests to Azure AD. </p>
+<p>● Successful Authentication Requests: Counts the number of successful authentication requests to Azure AD. </p>
+<p>● API Call Rate: Measures the number of API calls per minute or per hour.  </p>
+<p>● API Response Time: Measures the time it takes for an API request to return a response. </p>
+<p>● Application Errors: Counts the number of application errors, including failed requests and exceptions.</p>
+<p>​● Memory Usage: Measures the amount of memory used by the application.  </p>
+<p>● CPU Usage: Measures the percentage of CPU usage by the application.</p>
+<p>​● Network Traffic: Measures the amount of inbound and outbound network traffic for the application.</p>
+<p>​● Response Time: Measures the time it takes for the application to respond to a request.</p>
+<p><strong>7. Azure App configuration</strong></p>
+<p>​● Configuration Changes: Counts the number of configuration changes made within a specified time period.</p>
+<p>​● Configuration Latency: Measures the time it takes to fetch or update a configuration setting.</p>
+<p>​● Connection Failures: Counts the number of failed connections to Azure App Configuration.</p>
+<p>​● Queries per Second: Measures the number of configuration queries per second.</p>
+<p>​● Key or Value Size: Measures the size of keys or values stored in Azure App Configuration.</p>
+<p>​● Throttled Requests: Counts the number of requests that have been throttled due to exceeding the service limits.</p>
+<p>​● Data Volume: Measures the amount of data stored in Azure App Configuration.</p>
+<p>​● Application Errors: Counts the number of application errors related to Azure App Configuration.</p>
+<p>​● Response Time: Measures the time it takes for Azure App Configuration to respond to a request.</p>
+<p>​● Throughput: Measures the number of requests per second processed by Azure App Configuration.</p>
+<p><strong>​7. Azure Functions</strong> </p>
+<p>​● Execution count </p>
+<p>​● Execution duration </p>
+<p>​● Failed invocations </p>
+<p>​● CPU usage </p>
+<p>​● Memory usage </p>
+<p>​● Network traﬃc </p>
+<p><strong>​8. Azure Active Directory</strong> </p>
+<p>​● Sign-ins and sign-outs </p>
+<p>​● Authentication and authorization errors </p>
+<p>​● Role assignments and changes </p>
+<p>​● Directory object changes </p>
+<p><strong>9. Azure Service Bus (Queues, Topics)</strong> </p>
+<p>​● Message ingress/egress </p>
+<p>​● Queue/topic size and backlog </p>
+<p>​● Active and dead-letter message counts </p>
+<p>​● Connection errors </p>
+<p>​● Availability </p>
+<p><strong>10. Azure KeyVault</strong></p>
+<p>​● Secret Access Count: Counts the number of times a secret has been accessed within a specified time period.</p>
+<p>​● Key Access Count: Counts the number of times a key has been accessed within a specified time period.</p>
+<p>​● Certificate Access Count: Counts the number of times a certificate has been accessed within a specified time period.</p>
+<p>​● Encryption and Decryption Operations: Counts the number of encryption and decryption operations performed within a specified time period.</p>
+<p>​● Key Vault Latency: Measures the time it takes to fetch or update a secret, key, or certificate in Azure Key Vault.</p>
+<p>​● Failed Operations: Counts the number of failed operations within a specified time period.</p>
+<p>​● Network Traffic: Measures the amount of inbound and outbound network traffic for Azure Key Vault.</p>
+<p>​● Request Latency: Measures the time it takes for Azure Key Vault to respond to a request.</p>
+<p>​● Unauthorized Access Attempts: Counts the number of unauthorized access attempts to Azure Key Vault.</p>
+<p>​● Authentication Errors: Counts the number of authentication errors related to Azure Key Vault.</p>
+<h1 id="azure-devops-monitoring"><strong>​Azure DevOps Monitoring</strong></h1>
+<p><strong>​Work item tracking metrics</strong> </p>
+<p>​● Work item cycle time </p>
+<p>​● Work item lead time </p>
+<p>​● Work item backlog size </p>
+<p>​● Work item completion rate </p>
+<p>​● Bug resolution rates </p>
+<p>​● Feature delivery rate </p>
+<p><strong>Azure Devops repository metrics</strong> </p>
+<p>​● Number of commits </p>
+<p>​● Number of pull requests </p>
+<p>​● Merge success and failure rates </p>
+<p>​● Merge times and durations </p>
+<p>​● Number of branches and tags </p>
+<p>​● Commit and merge frequency </p>
+<p><strong>Build metrics</strong> </p>
+<p>​● Build success and failure rates </p>
+<p>● Build times and durations </p>
+<p>​● Queue time for builds </p>
+<p>​● Average queue length </p>
+<p>​● Number of builds in progress </p>
+<p>​● Number of builds waiting in the queue </p>
+<p>​● Number of builds triggered by branch or commit </p>
+<p>​
+<strong>​Release metrics</strong> </p>
+<p>​● Release success and failure rates </p>
+<p>​● Release times and durations </p>
+<p>​● Deployment frequency </p>
+<p>​● Time to deploy </p>
+<p>​● Average wait time for releases </p>
+<p>​● Number of releases in progress </p>
+<p>​● Number of releases waiting in the queue </p>
+<p><strong>Testplan metrics</strong> </p>
+<p>● Test pass/fail rates </p>
+<p>​● Test case coverage </p>
+<p>​● Test execution times </p>
+<p>​● Test result distribution </p>
+<p>​● Test suite duration </p>
+<p><strong>​Resource utilization metrics</strong> </p>
+<p>​● CPU and memory usage for Azure DevOps agents and build servers </p>
+<p>​● Disk space usage </p>
+<p>​● Network usage </p>
+<p>​● Connection time and rate </p>
+<p><strong>​Azure Artifacts</strong> </p>
+<p>​<em>Here is the Metrics related to Azure DevOps Artifacts that can be collected and analyzed using Azure Monitor and Insights</em></p>
+<p><strong>​Package download metrics</strong> </p>
+<p>​● Number of package downloads </p>
+<p>​● Package download rates </p>
+<p>​● Average download size per package </p>
+<p>​● Package download time </p>
+<p>​● Top downloaders by IP address, user, or client </p>
+<p>​
+<strong>​Package publish metrics</strong> </p>
+<p>​● Number of package publishes </p>
+<p>​● Package publish rates </p>
+<p>​● Average publish size per package </p>
+<p>​● Package publish time </p>
+<p>​● Top publishers by IP address, user, or client </p>
+<p><strong>Package retention metrics</strong> </p>
+<p>​● Number of packages retained </p>
+<p>​● Retention rate </p>
+<p>​● Retention time </p>
+<p>​● Number of packages deleted </p>
+<p>​● Deletion rates </p>
+<p>​● Average time to deletion </p>
+<p><strong>Package security metrics</strong>  </p>
+<p>​● Vulnerability scan results </p>
+<p>​● Security alerts and notiﬁcations </p>
+<p>​● Number of packages with security issues </p>
+<p>​● Package access and permission control </p>
+<h1 id="here-are-some-alert-threshold-values-for-commonly-monitored-azure-resources">Here are some alert threshold values for commonly monitored Azure resources:</h1>
+<p><strong>Virtual Machines:</strong></p>
+<pre><code>• CPU Usage: Alert threshold could be set to 80% for a sustained period of time.
+
+• Memory Usage: Alert threshold could be set to 80% for a sustained period of time.
+
+• Disk Space Usage: Alert threshold could be set to 85% for a sustained period of time.
+
+• Network Usage: Alert threshold could be set to 80% for a sustained period of time.
+
+• Disk IOPS: Alert threshold could be set to 90% for a sustained period of time.
+</code></pre>
+<p><strong>Azure App Service:</strong></p>
+<pre><code>• CPU Utilization: 80% for sustained periods of time
+
+• Memory Utilization: 80% for sustained periods of time
+
+• HTTP 5xx error rate: 5% for sustained periods of time
+
+• HTTP 4xx error rate: 10% for sustained periods of time
+</code></pre>
+<p><strong>Azure Storage:</strong></p>
+<pre><code>• Queue Length: 1,000 for more than 5 minutes
+
+• Blob Capacity: 80% for sustained periods of time
+
+• Transaction Rate: 80% for sustained periods of time
+
+• Egress Bandwidth: 80% for sustained periods of time
+</code></pre>
+<p><strong>Azure Functions:</strong></p>
+<pre><code>• Execution Count: 100,000 within an hour
+
+• Average Execution Time: 5 seconds or greater
+
+• Memory Usage: 70% for sustained periods of time
+
+• Exception Count: 100 within an hour
+
+• HTTP 5xx Error Rate: 5% for sustained periods of time
+</code></pre>
+<p><strong>Azure App Configuration:</strong></p>
+<pre><code>• Configuration Changes: 10 configuration changes per hour
+
+• Configuration Latency: 500 milliseconds for fetch or update operations
+
+• Connection Failure: 5 connection failures per hour
+
+• Queries per Second: 100 configuration queries per second
+
+• Key or Value Size: Maximum key or value size of 1 MB
+</code></pre>
+<p><strong>Azure Event Hubs:</strong></p>
+<pre><code>• Incoming Messages: Alert threshold could be set to a specific number or rate of messages within a defined time period, such as 100,000 messages in 1 hour.
+
+• Outgoing Messages: Alert threshold could be set to a specific number or rate of messages within a defined time period, such as 50,000 messages in 30 minutes.
+
+• Active Connections: Alert threshold could be set to a specific number of active connections, such as 500 connections.
+
+• Throttled Requests: Alert threshold could be set to the number of requests that have been throttled, such as 500 requests in 1 hour.
+
+• Latency: Alert threshold could be set to a specific response time or average latency value, such as 500ms response time for incoming messages.
+</code></pre>
+<p><strong>Azure Active Directory</strong></p>
+<pre><code>• Failed Sign-In Attempts: Alert threshold could be set to a specific number of failed sign-in attempts within a defined time period, such as 10 failed attempts in 1 hour.
+
+• Password Resets: Alert threshold could be set to the number of password resets within a defined time period, such as 50 resets in 24 hours.
+
+• User Account Deletion: Alert threshold could be set to the number of user accounts deleted within a defined time period, such as 5 accounts in 1 day.
+
+• Multi-Factor Authentication: Alert threshold could be set to the number of successful or unsuccessful MFA attempts, such as 100 successful or unsuccessful attempts in 1 hour.
+
+• Directory Role Changes: Alert threshold could be set to the number of directory role changes, such as 10 changes in 1 hour.
+</code></pre>
+<p><strong>Azure keyvault</strong>
 ```
-•  Key Vault Expiration: Set an alert threshold value to notify when a certificate, key or secret is about to expire, such as 30 days or 60 days before the expiration date.
-
-•  Key Vault Access: Set an alert threshold value to notify when there is an unusual amount of access to your Key Vault, such as more than 10 requests per second.
-
-•  Key Vault Authentication: Set an alert threshold value to notify when there is an unusual amount of authentication failures, such as more than 5 failed attempts in 1 hour.
-
-•  Key Vault Errors: Set an alert threshold value to notify when there is an unusual amount of errors, such as more than 10 errors per minute.
-
-•  Key Vault Latency: Set an alert threshold value to notify when there is an unusual amount of latency, such as more than 100 milliseconds for each request.
-
- ```
-
-#**Who should receive Azure Resources alert notifications**
-
-
--   **Virtual Machines:** Notifications can be sent to the DevOps team,
-    IT administrators, or security team.
-
--   **Azure** **App Service:** Notifications can be sent to the
-    development team, operations team, or project managers.
-
--   **Azure** **Storage:** Notifications can be sent to the operations
-    team, IT administrators, or security team.
-
--   **Azure** **Virtual Network:** Notifications can be sent to the
-    network administrators, security team, or IT administrators.
-
--   **Azure** **Key Vault:** Notifications can be sent to the security
-    team, operations team, or DevOps team.
-
--   **Azure** **Functions:** Notifications can be sent to the DevOps
+•  Key Vault Expiration: Set an alert threshold value to notify when a certificate, key or secret is about to expire, such as 30 days or 60 days before the expiration date.</p>
+<p>•  Key Vault Access: Set an alert threshold value to notify when there is an unusual amount of access to your Key Vault, such as more than 10 requests per second.</p>
+<p>•  Key Vault Authentication: Set an alert threshold value to notify when there is an unusual amount of authentication failures, such as more than 5 failed attempts in 1 hour.</p>
+<p>•  Key Vault Errors: Set an alert threshold value to notify when there is an unusual amount of errors, such as more than 10 errors per minute.</p>
+<p>•  Key Vault Latency: Set an alert threshold value to notify when there is an unusual amount of latency, such as more than 100 milliseconds for each request.</p>
+<p>```</p>
+<h1 id="who-should-receive-azure-resources-alert-notifications"><strong>Who should receive Azure Resources alert notifications</strong></h1>
+<ul>
+<li>
+<p><strong>Virtual Machines:</strong> Notifications can be sent to the DevOps team,
+    IT administrators, or security team.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>App Service:</strong> Notifications can be sent to the
+    development team, operations team, or project managers.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Storage:</strong> Notifications can be sent to the operations
+    team, IT administrators, or security team.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Virtual Network:</strong> Notifications can be sent to the
+    network administrators, security team, or IT administrators.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Key Vault:</strong> Notifications can be sent to the security
+    team, operations team, or DevOps team.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Functions:</strong> Notifications can be sent to the DevOps
     team, development team, or project managers. They can be related to
     issues with the Azure Functions service, such as errors in function
-    execution, function timeouts, or issues with function triggers.
-
--   **Azure** **Service Bus:** Notifications can be sent to the
+    execution, function timeouts, or issues with function triggers.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Service Bus:</strong> Notifications can be sent to the
     operations team, IT administrators, or security team. They can be
     related to issues with the Service Bus service, such as message
     delivery failures, connectivity issues, or issues with authorization
-    and access control.
-
--   **Azure** **Event Grid:** Notifications can be sent to the DevOps
+    and access control.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Event Grid:</strong> Notifications can be sent to the DevOps
     team, development team, or project managers. They can be related to
     issues with the Event Grid service, such as event subscription
     failures, event delivery issues, or issues with event schema
-    validation.
-
--   **Azure** **Notification Hubs:** Notifications can be sent to the
+    validation.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Notification Hubs:</strong> Notifications can be sent to the
     operations team, IT administrators, or security team. They can be
     related to issues with the Notification Hubs service, such as
     message delivery failures, connectivity issues, or issues with
-    authorization and access control.
-
--   **Azure** **App Registration:** Notifications can be sent to the
+    authorization and access control.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>App Registration:</strong> Notifications can be sent to the
     security team, operations team, or DevOps team. They can be related
     to issues with App Registration, such as application authentication
     failures, changes to application permissions, or changes to
-    application owners and contributors.
-
--   **Azure** **App Configuration:** Notifications can be sent to the
+    application owners and contributors.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>App Configuration:</strong> Notifications can be sent to the
     development team, operations team, or project managers. They can be
     related to issues with App Configuration, such as changes to
     configuration settings, changes to feature flags, or issues with
-    configuration data consistency and integrity.
-
-**Cosmosdb:**
-
--   **Database administrators:** If there is an alert related to
+    configuration data consistency and integrity.</p>
+</li>
+</ul>
+<p><strong>Cosmosdb:</strong></p>
+<ul>
+<li>
+<p><strong>Database administrators:</strong> If there is an alert related to
     database performance or availability, the database administrator(s)
-    should receive the alert notification.
-
--   **Developers:** If there is an alert related to application
+    should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Developers:</strong> If there is an alert related to application
     performance or errors, the developers responsible for the
-    application should receive the alert notification.
-
--   **IT Operations:** If there is an alert related to infrastructure or
+    application should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>IT Operations:</strong> If there is an alert related to infrastructure or
     network issues, the IT operations team should receive the alert
-    notification.
-
--   **Security personnel:** If there is an alert related to security
+    notification.</p>
+</li>
+<li>
+<p><strong>Security personnel:</strong> If there is an alert related to security
     events or breaches, the security personnel should receive the alert
-    notification.
-
-#**Who should receive Azure DevOps alert notifications**
-
-
--   **Project administrators:** If there is an alert related to project
+    notification.</p>
+</li>
+</ul>
+<h1 id="who-should-receive-azure-devops-alert-notifications"><strong>Who should receive Azure DevOps alert notifications</strong></h1>
+<ul>
+<li>
+<p><strong>Project administrators:</strong> If there is an alert related to project
     settings, permissions, or access in Azure DevOps, the project
-    administrators should receive the alert notification.
-
--   **Developers:** If there is an alert related to build or release
+    administrators should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Developers:</strong> If there is an alert related to build or release
     failures, code quality issues, or code changes in Azure DevOps, the
     developers responsible for the code should receive the alert
-    notification.
-
--   **IT Operations:** If there is an alert related to infrastructure or
+    notification.</p>
+</li>
+<li>
+<p><strong>IT Operations:</strong> If there is an alert related to infrastructure or
     network issues affecting the Azure DevOps service, the IT operations
-    team should receive the alert notification.
-
--   **Security personnel:** If there is an alert related to security
+    team should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Security personnel:</strong> If there is an alert related to security
     events or breaches in Azure DevOps, the security personnel should
-    receive the alert notification.
-
--   **Testers:** If there is an alert related to test failures or issues
+    receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Testers:</strong> If there is an alert related to test failures or issues
     in Azure DevOps, the testers responsible for the tests should
-    receive the alert notification.
-
--   **Scrum masters or Agile coaches:** If there is an alert related to
+    receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Scrum masters or Agile coaches:</strong> If there is an alert related to
     the progress or status of a sprint or agile project in Azure DevOps,
     the scrum masters or agile coaches should receive the alert
-    notification.
-
--   **Product owners or stakeholders:** If there is an alert related to
+    notification.</p>
+</li>
+<li>
+<p><strong>Product owners or stakeholders:</strong> If there is an alert related to
     a change or update in a product or feature in Azure DevOps, the
     product owners or stakeholders should receive the alert
-    notification.
-
--   **Support team:** If there is an alert related to customer-reported
+    notification.</p>
+</li>
+<li>
+<p><strong>Support team:</strong> If there is an alert related to customer-reported
     issues or bugs in Azure DevOps, the support team should receive the
-    alert notification.
-
--   **Operations team:** If there is an alert related to server or
+    alert notification.</p>
+</li>
+<li>
+<p><strong>Operations team:</strong> If there is an alert related to server or
     application monitoring, the operations team should receive the alert
-    notification.
-
--   **Database administrators:** If there is an alert related to
+    notification.</p>
+</li>
+<li>
+<p><strong>Database administrators:</strong> If there is an alert related to
     database performance, capacity, or availability issues in Azure
     DevOps, the database administrators should receive the alert
-    notification.
-
--   **Business analysts:** If there is an alert related to data
+    notification.</p>
+</li>
+<li>
+<p><strong>Business analysts:</strong> If there is an alert related to data
     analytics, insights or reporting in Azure DevOps, the business
-    analysts should receive the alert notification.
-
--   **Compliance team:** If there is an alert related to compliance
+    analysts should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Compliance team:</strong> If there is an alert related to compliance
     violations or issues in Azure DevOps, the compliance team should
-    receive the alert notification.
-
--   **Disaster recovery team:** If there is an alert related to disaster
+    receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Disaster recovery team:</strong> If there is an alert related to disaster
     recovery, backup or restore issues in Azure DevOps, the disaster
-    recovery team should receive the alert notification
-
--   **Incident response team:** If there is an alert related to security
+    recovery team should receive the alert notification</p>
+</li>
+<li>
+<p><strong>Incident response team:</strong> If there is an alert related to security
     or operational incidents in Azure DevOps, the incident response team
-    should receive the alert notification.
-
-#**Who should receive PowerApps tenant or Environmrnts alert notifications**
-
-
--   **PowerApps** **administrators:** If there is an alert related to
+    should receive the alert notification.</p>
+</li>
+</ul>
+<h1 id="who-should-receive-powerapps-tenant-or-environmrnts-alert-notifications"><strong>Who should receive PowerApps tenant or Environmrnts alert notifications</strong></h1>
+<ul>
+<li>
+<p><strong>PowerApps</strong> <strong>administrators:</strong> If there is an alert related to
     the availability or performance of the PowerApps service, the
-    PowerApps administrators should receive the alert notification.
-
--   **Developers:** If there is an alert related to custom code or
+    PowerApps administrators should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Developers:</strong> If there is an alert related to custom code or
     functionality in PowerApps, the developers responsible for the code
-    should receive the alert notification.
-
--   **IT Operations:** If there is an alert related to infrastructure or
+    should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>IT Operations:</strong> If there is an alert related to infrastructure or
     network issues affecting the PowerApps service, the IT operations
-    team should receive the alert notification.
-
--   **Security personnel:** If there is an alert related to security
+    team should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Security personnel:</strong> If there is an alert related to security
     events or breaches in PowerApps, the security personnel should
-    receive the alert notification.
-
-**How to Integrate alerts for all Azure resources.**
-
-> **Here are the high-level steps to integrate alerts for all Azure resources using Azure Monitor:**
-
-**Create an Azure Monitor resource:** First, you need to create an Azure
+    receive the alert notification.</p>
+</li>
+</ul>
+<p><strong>How to Integrate alerts for all Azure resources.</strong></p>
+<blockquote>
+<p><strong>Here are the high-level steps to integrate alerts for all Azure resources using Azure Monitor:</strong></p>
+</blockquote>
+<p><strong>Create an Azure Monitor resource:</strong> First, you need to create an Azure
 Monitor resource in your Azure subscription. This resource acts as a
-central repository for all your monitoring data.
-
-**Enable Azure Monitor on all resources:** Next, you need to enable
+central repository for all your monitoring data.</p>
+<p><strong>Enable Azure Monitor on all resources:</strong> Next, you need to enable
 Azure Monitor on all Azure resources that you want to monitor. This can
-be done using Azure Policy or by using Azure Resource Manager templates.
-
-**Configure data sources:** Once you have enabled Azure Monitor on all
+be done using Azure Policy or by using Azure Resource Manager templates.</p>
+<p><strong>Configure data sources:</strong> Once you have enabled Azure Monitor on all
 resources, you can configure the data sources that you want to monitor.
 This can include Azure resources like virtual machines, Azure App
-Service, Azure Storage, Azure SQL, and many others.
-
-**Create alerts:** After configuring the data sources, you can create
+Service, Azure Storage, Azure SQL, and many others.</p>
+<p><strong>Create alerts:</strong> After configuring the data sources, you can create
 alerts that are triggered based on certain conditions or thresholds. For
 example, you can create an alert that triggers when the CPU usage of a
-virtual machine exceeds a certain percentage.
-
-**Define alert criteria:** You can define the criteria for when an alert
+virtual machine exceeds a certain percentage.</p>
+<p><strong>Define alert criteria:</strong> You can define the criteria for when an alert
 should be triggered, such as thresholds, time periods, and severity
-levels.
-
-**Configure notification channels:** Finally, you can configure
+levels.</p>
+<p><strong>Configure notification channels:</strong> Finally, you can configure
 notification channels for your alerts, such as email, SMS, or webhook.
 This ensures that the right people are notified when an alert is
-triggered.
-
-**Customize alerts:** Azure Monitor allows you to customize alerts by
+triggered.</p>
+<p><strong>Customize alerts:</strong> Azure Monitor allows you to customize alerts by
 defining complex conditions, using log queries, and creating
 multi-dimensional alerts that combine different metrics and data
-sources.
-
-**Analyze alert data:** Azure Monitor provides rich analytics
+sources.</p>
+<p><strong>Analyze alert data:</strong> Azure Monitor provides rich analytics
 capabilities that allow you to analyze alert data, identify trends, and
 gain insights into your Azure environment. You can use log queries,
 visualizations, and machine learning algorithms to analyze your data and
-optimize your alert configuration.
-
-**Automate remediation:** Azure Monitor also allows you to automate
+optimize your alert configuration.</p>
+<p><strong>Automate remediation:</strong> Azure Monitor also allows you to automate
 remediation actions, such as restarting a virtual machine, scaling out
 an application, or executing a runbook in Azure Automation. By
 automating remediation, you can minimize downtime and reduce the impact
-of issues on your applications and services.
-
-**Monitor third-party services:** Azure Monitor can also be used to
+of issues on your applications and services.</p>
+<p><strong>Monitor third-party services:</strong> Azure Monitor can also be used to
 monitor third-party services and applications running outside of Azure.
 This can be done by integrating Azure Monitor with external monitoring
 solutions, such as Nagios or Zabbix, or by using Azure Monitor\'s
-extensibility framework to create custom monitoring solutions.
-
-# How to Integrate alerts for Powerapps Tenants, Environments and dataverse
-
-1. Log in to the Power Platform Admin center
-(<https://admin.powerplatform.microsoft.com>) with your admin
-credentials.
-
-2. From the left-hand navigation pane, select \"Environments\".
-
-3. Select the environment that you want to configure alerts for.
-
-4. Click on \"Settings\" in the top menu bar, and select \"Alerts\"
-from the dropdown menu.
-
-5. Click on \"Add alert rule\" to create a new alert rule.
-
-6. In the \"Add alert rule\" dialog box, enter a name for the alert
-rule, and select the severity level for the alert.
-
-7. Choose the type of resource you want to monitor by selecting the
+extensibility framework to create custom monitoring solutions.</p>
+<h1 id="how-to-integrate-alerts-for-powerapps-tenants-environments-and-dataverse">How to Integrate alerts for Powerapps Tenants, Environments and dataverse</h1>
+<ol>
+<li>
+<p>Log in to the Power Platform Admin center
+(<a href="https://admin.powerplatform.microsoft.com">https://admin.powerplatform.microsoft.com</a>) with your admin
+credentials.</p>
+</li>
+<li>
+<p>From the left-hand navigation pane, select \"Environments\".</p>
+</li>
+<li>
+<p>Select the environment that you want to configure alerts for.</p>
+</li>
+<li>
+<p>Click on \"Settings\" in the top menu bar, and select \"Alerts\"
+from the dropdown menu.</p>
+</li>
+<li>
+<p>Click on \"Add alert rule\" to create a new alert rule.</p>
+</li>
+<li>
+<p>In the \"Add alert rule\" dialog box, enter a name for the alert
+rule, and select the severity level for the alert.</p>
+</li>
+<li>
+<p>Choose the type of resource you want to monitor by selecting the
 appropriate option from the \"Resource type\" dropdown list. You can
-choose from Power Apps, Power Automate, or Dataverse.
-
-8. Select the specific resource that you want to monitor from the
+choose from Power Apps, Power Automate, or Dataverse.</p>
+</li>
+<li>
+<p>Select the specific resource that you want to monitor from the
 \"Resource\" dropdown list. For example, if you selected Power Apps as
-the resource type, you can select a specific app to monitor.
-
-9. Select the conditions that will trigger the alert. You can choose
+the resource type, you can select a specific app to monitor.</p>
+</li>
+<li>
+<p>Select the conditions that will trigger the alert. You can choose
 from a variety of conditions, such as when the resource reaches a
 certain threshold of usage, when a specific action is performed, or when
-an error occurs.
-
-10. Choose the action that will be taken when the alert is triggered.
+an error occurs.</p>
+</li>
+<li>
+<p>Choose the action that will be taken when the alert is triggered.
 You can choose to receive an email notification, a text message, or a
-push notification to your mobile device.
-
-11. Click \"Save\" to save the alert rule. 
-
-12. Once the alert rule is saved, you can view it in the \"Alert
-rules\" section of the environment\'s settings.
-
-13. You can also edit or delete existing alert rules by selecting them
-from the \"Alert rules\" section and clicking on the appropriate button.
-
-#**How to Integrate alerts for Azure DevOps**
-
-1.  Log in to the Azure DevOps portal (<https://dev.azure.com>) with
-    your credentials.
-
-2.  In the left-hand navigation pane, select the project for which you
-    want to configure alerts.
-
-3.  Click on the \"Project settings\" gear icon in the bottom left
-    corner of the screen.
-
-4.  Select \"Notifications\" under the \"General\" tab.
-
-5.  Click on the \"New Subscription\" button to create a new alert
-    subscription.
-
-6.  Choose the type of events that you want to receive alerts for. You
+push notification to your mobile device.</p>
+</li>
+<li>
+<p>Click \"Save\" to save the alert rule. </p>
+</li>
+<li>
+<p>Once the alert rule is saved, you can view it in the \"Alert
+rules\" section of the environment\'s settings.</p>
+</li>
+<li>
+<p>You can also edit or delete existing alert rules by selecting them
+from the \"Alert rules\" section and clicking on the appropriate button.</p>
+</li>
+</ol>
+<h1 id="how-to-integrate-alerts-for-azure-devops"><strong>How to Integrate alerts for Azure DevOps</strong></h1>
+<ol>
+<li>
+<p>Log in to the Azure DevOps portal (<a href="https://dev.azure.com">https://dev.azure.com</a>) with
+    your credentials.</p>
+</li>
+<li>
+<p>In the left-hand navigation pane, select the project for which you
+    want to configure alerts.</p>
+</li>
+<li>
+<p>Click on the \"Project settings\" gear icon in the bottom left
+    corner of the screen.</p>
+</li>
+<li>
+<p>Select \"Notifications\" under the \"General\" tab.</p>
+</li>
+<li>
+<p>Click on the \"New Subscription\" button to create a new alert
+    subscription.</p>
+</li>
+<li>
+<p>Choose the type of events that you want to receive alerts for. You
     can select from a variety of events, such as when a work item is
     created or updated, when a build completes, or when a pull request
-    is merged.
-
-7.  Select the target for the alert. You can choose to send the alert to
+    is merged.</p>
+</li>
+<li>
+<p>Select the target for the alert. You can choose to send the alert to
     a specific email address, to a group of email addresses, or to a
-    webhook URL.
-
-8.  Configure the details of the alert subscription. Depending on the
+    webhook URL.</p>
+</li>
+<li>
+<p>Configure the details of the alert subscription. Depending on the
     type of event you selected, you may be asked to provide additional
     information, such as the type of work item or build pipeline to
-    monitor.
-
-9.  Click on the \"Create\" button to create the alert subscription.
-
-10. Once the alert subscription is created, you can view and manage it
-    under the \"Notifications\" tab.
-
-11. You can edit or delete existing alert subscriptions by selecting
-    them from the list and clicking on the appropriate button.
+    monitor.</p>
+</li>
+<li>
+<p>Click on the \"Create\" button to create the alert subscription.</p>
+</li>
+<li>
+<p>Once the alert subscription is created, you can view and manage it
+    under the \"Notifications\" tab.</p>
+</li>
+<li>
+<p>You can edit or delete existing alert subscriptions by selecting
+    them from the list and clicking on the appropriate button.</p>
+</li>
+</ol>
 
 
 
