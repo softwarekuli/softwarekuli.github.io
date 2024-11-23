@@ -1,0 +1,2506 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Important%20Basics%20of%20Azure%20DevOps/">
+      
+      
+        <link rel="next" href="../DevOps-Interview-Preparation/ansible/">
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Monitoring-Document 📈 - Guduru Ramaprasad</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="#2196F3" data-md-color-accent="#2196F3">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monitoring-dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Guduru Ramaprasad" class="md-header__button md-logo" aria-label="Guduru Ramaprasad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Guduru Ramaprasad
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monitoring-Document 📈
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="#2196F3" data-md-color-accent="#2196F3"  aria-label="🌙 Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="🌙 Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="#FF5252"  aria-label="☀️ Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="☀️ Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Guduru Ramaprasad" class="md-nav__button md-logo" aria-label="Guduru Ramaprasad" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Guduru Ramaprasad
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Profile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux 🐧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GIT 🚀
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            GIT 🚀
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whatisversioncontrol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is Version Control 📚
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../benefitsofversioncontrol/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benefits of Version Control 🏃
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sourcecodemanagement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Source Code Management 🌿
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_4" id="__nav_4_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    What is Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            What is Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docs/GitHub/Advantages.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advantages 🚀
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Performance ⚡
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security 🔒
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flexibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flexibility 🧩
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Versioncontrolwithgit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Version control with Git 🔄
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitcommands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Commands 📜
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AWS ☁️
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS ☁️
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Aws Account Creation 🏗️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/List%20of%20Aws%20Services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of Aws Services 📦
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/Create%20EC2%20instance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create EC2 instance 💻
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/Create%20S3%20Bucket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create S3 Bucket 📂
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/Create%20RDS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create RDS 🗃️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AWS/EBS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Amazon Elastic Block Store (EBS) 🚀
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Azure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Azure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure/Interduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure/Interduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jenkins 🛠️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker 🐳
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Terraform 🌍
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Terraform 🌍
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Terraform-commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terraform-All-Commands 🛠️
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Azure-DevOps 🌐
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Azure-DevOps 🌐
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Azure-DevOps-Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure-DevOps-Introduction 📑
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Important%20Basics%20of%20Azure%20DevOps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Important Basics of Azure DevOps 🧩
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Monitoring 📊
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Monitoring 📊
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Monitoring-Document 📈
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring-Document 📈
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-monitoring-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Monitoring Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-monitoring-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Monitoring Flow Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-to-send-notification-for-azure-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process to Send Notification For Azure Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DevOps-Interview-questions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            DevOps-Interview-questions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/ansible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/azure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/chef/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chef
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/elasticsearch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elasticsearch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/gcp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/Git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/GitOps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitOps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/Jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jenkins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/kafka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kafka
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/miscellaneous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Miscellaneous
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/prometheusStack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prometheus Stack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/puppet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Puppet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/saltstack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SaltStack
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevOps-Interview-Preparation/terraform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terraform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-monitoring-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Monitoring Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-monitoring-flow-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      High-Level Monitoring Flow Diagram
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-to-send-notification-for-azure-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process to Send Notification For Azure Resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="monitoring-dashboard">Monitoring &amp; Dashboard</h1>
+<p><img alt="image" src="./2.png" /></p>
+<h2 id="table-of-contents">Table of Contents:</h2>
+<ol>
+<li>
+<p>High-level monitoring architecture and Flow diagram</p>
+</li>
+<li>
+<p>Purpose </p>
+</li>
+<li>
+<p>Powerapps Monitoring </p>
+</li>
+<li>
+<p>​Metrics </p>
+</li>
+<li>
+<p>​Logs </p>
+</li>
+<li>
+<p>​Alerts  </p>
+</li>
+<li>
+<p>​Dashboards  </p>
+</li>
+<li>
+<p>​User activity metrics </p>
+</li>
+<li>
+<p>​App performance metrics </p>
+</li>
+<li>
+<p>​Data usage metrics </p>
+</li>
+<li>
+<p>​Flow and Power Automate metrics </p>
+</li>
+<li>
+<p>​Custom connector metrics  ​ </p>
+</li>
+<li>
+<p>Azure Resources</p>
+</li>
+<li>
+<p>​Virtual Machines  </p>
+</li>
+<li>
+<p>​Azure App Service (Web Apps, Mobile Apps, API Apps) </p>
+</li>
+<li>
+<p>​Azure Storage (Blobs, Queues, Tables, Files) </p>
+</li>
+<li>
+<p>​Azure Cosmos DB </p>
+</li>
+<li>
+<p>App Registration</p>
+</li>
+<li>
+<p>App Configuration</p>
+</li>
+<li>
+<p>​Azure Functions </p>
+</li>
+<li>
+<p>​Azure Active Directory </p>
+</li>
+<li>
+<p>​Azure Service Bus (Queues, Topics) </p>
+</li>
+<li>
+<p>Azure DevOps</p>
+</li>
+<li>
+<p>​Work item tracking metrics </p>
+</li>
+<li>
+<p>​Azure Devops repository metrics </p>
+</li>
+<li>
+<p>​Build metrics </p>
+</li>
+<li>
+<p>​Release metrics </p>
+</li>
+<li>
+<p>​Testplan metrics </p>
+</li>
+<li>
+<p>​Resource utilization metrics </p>
+</li>
+<li>
+<p>​Azure Artifacts </p>
+</li>
+</ol>
+<h2 id="high-level-monitoring-architecture">High-Level Monitoring Architecture</h2>
+<p><img alt="image" src="./3.png" /></p>
+<h2 id="high-level-monitoring-flow-diagram">High-Level Monitoring Flow Diagram</h2>
+<p><a href="./6.png">image</a></p>
+<h2 id="process-to-send-notification-for-azure-resources">Process to Send Notification For Azure Resources</h2>
+<p><img alt="image" src="./5.png" /></p>
+<h2 id="purpose">Purpose</h2>
+<p>The purpose of monitoring PowerApps, Azure, and Azure DevOps using Azure Monitor or Insights is to gain insights into the performance, availability, and security of these critical systems and applications. Here are some specific benefits of using Azure Monitor or Insights for monitoring
+ </p>
+<p><strong>​PowerApps Monitoring:</strong> PowerApps is a low-code platform that enables users to create custom business applications without writing code. Monitoring PowerApps with Azure Monitor or Insights can help identify issues that could impact application performance, such as long response times or errors, and optimize app performance.</p>
+<p><strong>​Azure Monitoring:</strong> Azure is a cloud computing platform that provides a wide range of services for building, deploying, and managing applications and services. Monitoring Azure services with Azure Monitor or Insights can help detect and troubleshoot issues across the entire stack, including virtual machines, containers, storage, and networking.</p>
+<p><strong>​Azure DevOps Monitoring:</strong> Azure DevOps is a cloud-based service that provides tools for software development, testing, and deployment. Monitoring Azure DevOps with Azure Monitor or Insights can help ensure that DevOps processes are running smoothly, identify bottlenecks and optimize processes, and track deployment success rates.In general, using Azure Monitor or Insights for monitoring provides a centralized platform for collecting and analyzing data from multiple sources, enabling organizations to gain a holistic view of their systems and applications. By monitoring and analyzing this data, organizations can proactively identify and address issues before they become critical, optimize system performance and resource utilization, and ensure the reliability, security, and availability of their critical systems and applications.</p>
+<p>​<strong>Here are the Power Apps tenants and environments level monitoring supported by Azure Monitor</strong></p>
+<p><strong>Power Apps production and non-production environments</strong></p>
+<p>​1. Power Apps portals </p>
+<p>​2. PowerApps Common Data Service (CDS) environments </p>
+<h1 id="azure-monitor-provides-the-following-types-of-monitoring-for-powerapps-environments"><strong>Azure Monitor provides the following types of monitoring for PowerApps environments:</strong></h1>
+<p><strong>​1. Metrics</strong> - Azure Monitor collects metrics for various resources within a PowerApps environment, such as portal page views, CDS entities, and more. These metrics can be used to creat*e custom alerts and dashboards. </p>
+<p><strong>2. Logs</strong> - Azure Monitor can collect logs from various sources within a PowerApps environment, such as portal requests, audit logs, and more. These logs can be used for troubleshooting and analysis. </p>
+<p><strong>​3. Alerts</strong> - Azure Monitor can create alerts based on speciﬁc conditions in your PowerApps environment, such as when a portal page is unavailable or when a certain number of CDS requests fail.</p>
+<p><strong>4. Dashboards</strong> - Azure Monitor can create custom dashboards that provide a visual representation of metrics and logs from your PowerApps environment. These dashboards can be customized to show the information that is most important. </p>
+<p><strong>​Metrics for PowerApps:</strong> </p>
+<p>​1. Portal page views - the number of views for each portal page. </p>
+<p>​2. Portal unique visitors - the number of unique visitors to a portal. </p>
+<p>​3. Portal requests - the number of requests made to a portal. </p>
+<p>​4. Portal response time - the time it takes for a portal to respond to a
+request. </p>
+<p>​5. Portal user login failures - the number of failed login attempts by
+portal users. </p>
+<p>​6. CDS entity reads - the number of times a CDS entity is read. </p>
+<p>​7. CDS entity writes - the number of times a CDS entity is written to. </p>
+<p>​8. CDS entity deletes - the number of times a CDS entity is deleted. </p>
+<p>​9. CDS API calls - the number of API calls made to CDS. </p>
+<p>​10. CDS failed requests - the number of failed requests made to CDS. </p>
+<p>These metrics can be used to gain insights into the performance and usage of your PowerApps environment. You can use Azure Monitor to create custom alerts based on these metrics to be notiﬁed when certain thresholds are reached. You can also create custom dashboards to visualize these metrics and gain a better understanding of your PowerApps environment. </p>
+<h2 id="azure-monitor-and-azure-insights">Azure Monitor and Azure Insights:</h2>
+<p><strong>​User activity metrics</strong> </p>
+<p>​● Number of active users </p>
+<p>● Active user trends over time </p>
+<p>​● Number of unique sessions </p>
+<p>​● Session duration and frequency </p>
+<p>​● Popular apps and screen </p>
+<h2 id="app-performance-metrics">​App performance metrics</h2>
+<p>​● App load times </p>
+<p>​● App response times </p>
+<p>​● App crashes and error rates </p>
+<p>​● Resource utilization (CPU, memory, disk) </p>
+<p>​● API call duration and frequency </p>
+<h2 id="data-usage-metrics">​Data usage metrics</h2>
+<p>​● Number of data requests </p>
+<p>​● Data request trends over time </p>
+<p>​● Data request response times ​ </p>
+<p>​● Data usage by app and user </p>
+<p>​● Data usage by data source and entity </p>
+<h2 id="flow-and-power-automate-metrics">​Flow and Power Automate metrics</h2>
+<p>​● Number of successful and failed runs </p>
+<p>​● Run duration and frequency </p>
+<p>​● Flow response times </p>
+<p>​● Number of triggers and actions </p>
+<p>​● Flow and Power Automate errors and exceptions </p>
+<h2 id="custom-connector-metrics">Custom connector metrics</h2>
+<p>​● Connector usage and adoption </p>
+<p>​● Connector response times </p>
+<p>​● Connector error rates </p>
+<p>​● Custom connector performance metrics </p>
+<p>​● Connector authorization and authentication metrics </p>
+<p>​ </p>
+<h2 id="azure-resources">Azure Resources</h2>
+<p><em>​Here is a list of some of the metrics and data that can be monitored for each of the Azure resources using Azure Monitor</em></p>
+<p><strong>​1. Virtual Machines</strong>  </p>
+<p>​● CPU usage </p>
+<p>​● Memory usage </p>
+<p>​● Disk I/O </p>
+<p>​● Network traﬃc </p>
+<p>​● Disk space utilization </p>
+<p>​● Disk read/write operations </p>
+<p>​● Operating system performance counters </p>
+<p><strong>2.Azure App Service (Web Apps, Mobile Apps, API Apps)</strong> </p>
+<p>​● Response time </p>
+<p>​● CPU usage </p>
+<p>​● Memory usage </p>
+<p>​● HTTP status codes </p>
+<p>​● Requests per second </p>
+<p>​● Exceptions and errors </p>
+<p>​● Performance counters from the underlying VM </p>
+<p>​● Performance counters from the underlying VM3. </p>
+<p><strong>​3. Azure Storage (Blobs, Queues, Tables, Files)</strong> </p>
+<p>​● Data ingress/egress </p>
+<p>​● Transaction rates </p>
+<p>​● Latency </p>
+<p>​● Capacity and utilization </p>
+<p>​● Availability </p>
+<p>​● Failure events </p>
+<p>​<strong>​4. Azure Event Hubs</strong> </p>
+<p>​● Incoming events </p>
+<p>​● Outgoing events </p>
+<p>​● Incoming bytes </p>
+<p>​● Incoming and outgoing rates </p>
+<p>​● Connection errors </p>
+<p>​● Availability </p>
+<p><strong>5. Azure Cosmos DB</strong> </p>
+<p>​● Request units (RUs) </p>
+<p>​● Storage usage </p>
+<p>​● Availability </p>
+<p>​● Throughput </p>
+<p>​● Latency </p>
+<p>​● Failed requests </p>
+<p><strong>6. Azure App Registration</strong></p>
+<p>​● Authentication Latency: Measures the time it takes to authenticate a user or service principal with Azure AD.  </p>
+<p>● Failed Authentication Requests: Counts the number of failed authentication requests to Azure AD. </p>
+<p>● Successful Authentication Requests: Counts the number of successful authentication requests to Azure AD. </p>
+<p>● API Call Rate: Measures the number of API calls per minute or per hour.  </p>
+<p>● API Response Time: Measures the time it takes for an API request to return a response. </p>
+<p>● Application Errors: Counts the number of application errors, including failed requests and exceptions.</p>
+<p>​● Memory Usage: Measures the amount of memory used by the application.  </p>
+<p>● CPU Usage: Measures the percentage of CPU usage by the application.</p>
+<p>​● Network Traffic: Measures the amount of inbound and outbound network traffic for the application.</p>
+<p>​● Response Time: Measures the time it takes for the application to respond to a request.</p>
+<p><strong>7. Azure App configuration</strong></p>
+<p>​● Configuration Changes: Counts the number of configuration changes made within a specified time period.</p>
+<p>​● Configuration Latency: Measures the time it takes to fetch or update a configuration setting.</p>
+<p>​● Connection Failures: Counts the number of failed connections to Azure App Configuration.</p>
+<p>​● Queries per Second: Measures the number of configuration queries per second.</p>
+<p>​● Key or Value Size: Measures the size of keys or values stored in Azure App Configuration.</p>
+<p>​● Throttled Requests: Counts the number of requests that have been throttled due to exceeding the service limits.</p>
+<p>​● Data Volume: Measures the amount of data stored in Azure App Configuration.</p>
+<p>​● Application Errors: Counts the number of application errors related to Azure App Configuration.</p>
+<p>​● Response Time: Measures the time it takes for Azure App Configuration to respond to a request.</p>
+<p>​● Throughput: Measures the number of requests per second processed by Azure App Configuration.</p>
+<p><strong>​7. Azure Functions</strong> </p>
+<p>​● Execution count </p>
+<p>​● Execution duration </p>
+<p>​● Failed invocations </p>
+<p>​● CPU usage </p>
+<p>​● Memory usage </p>
+<p>​● Network traﬃc </p>
+<p><strong>​8. Azure Active Directory</strong> </p>
+<p>​● Sign-ins and sign-outs </p>
+<p>​● Authentication and authorization errors </p>
+<p>​● Role assignments and changes </p>
+<p>​● Directory object changes </p>
+<p><strong>9. Azure Service Bus (Queues, Topics)</strong> </p>
+<p>​● Message ingress/egress </p>
+<p>​● Queue/topic size and backlog </p>
+<p>​● Active and dead-letter message counts </p>
+<p>​● Connection errors </p>
+<p>​● Availability </p>
+<p><strong>10. Azure KeyVault</strong></p>
+<p>​● Secret Access Count: Counts the number of times a secret has been accessed within a specified time period.</p>
+<p>​● Key Access Count: Counts the number of times a key has been accessed within a specified time period.</p>
+<p>​● Certificate Access Count: Counts the number of times a certificate has been accessed within a specified time period.</p>
+<p>​● Encryption and Decryption Operations: Counts the number of encryption and decryption operations performed within a specified time period.</p>
+<p>​● Key Vault Latency: Measures the time it takes to fetch or update a secret, key, or certificate in Azure Key Vault.</p>
+<p>​● Failed Operations: Counts the number of failed operations within a specified time period.</p>
+<p>​● Network Traffic: Measures the amount of inbound and outbound network traffic for Azure Key Vault.</p>
+<p>​● Request Latency: Measures the time it takes for Azure Key Vault to respond to a request.</p>
+<p>​● Unauthorized Access Attempts: Counts the number of unauthorized access attempts to Azure Key Vault.</p>
+<p>​● Authentication Errors: Counts the number of authentication errors related to Azure Key Vault.</p>
+<h1 id="azure-devops-monitoring"><strong>​Azure DevOps Monitoring</strong></h1>
+<p><strong>​Work item tracking metrics</strong> </p>
+<p>​● Work item cycle time </p>
+<p>​● Work item lead time </p>
+<p>​● Work item backlog size </p>
+<p>​● Work item completion rate </p>
+<p>​● Bug resolution rates </p>
+<p>​● Feature delivery rate </p>
+<p><strong>Azure Devops repository metrics</strong> </p>
+<p>​● Number of commits </p>
+<p>​● Number of pull requests </p>
+<p>​● Merge success and failure rates </p>
+<p>​● Merge times and durations </p>
+<p>​● Number of branches and tags </p>
+<p>​● Commit and merge frequency </p>
+<p><strong>Build metrics</strong> </p>
+<p>​● Build success and failure rates </p>
+<p>● Build times and durations </p>
+<p>​● Queue time for builds </p>
+<p>​● Average queue length </p>
+<p>​● Number of builds in progress </p>
+<p>​● Number of builds waiting in the queue </p>
+<p>​● Number of builds triggered by branch or commit </p>
+<p>​
+<strong>​Release metrics</strong> </p>
+<p>​● Release success and failure rates </p>
+<p>​● Release times and durations </p>
+<p>​● Deployment frequency </p>
+<p>​● Time to deploy </p>
+<p>​● Average wait time for releases </p>
+<p>​● Number of releases in progress </p>
+<p>​● Number of releases waiting in the queue </p>
+<p><strong>Testplan metrics</strong> </p>
+<p>● Test pass/fail rates </p>
+<p>​● Test case coverage </p>
+<p>​● Test execution times </p>
+<p>​● Test result distribution </p>
+<p>​● Test suite duration </p>
+<p><strong>​Resource utilization metrics</strong> </p>
+<p>​● CPU and memory usage for Azure DevOps agents and build servers </p>
+<p>​● Disk space usage </p>
+<p>​● Network usage </p>
+<p>​● Connection time and rate </p>
+<p><strong>​Azure Artifacts</strong> </p>
+<p>​<em>Here is the Metrics related to Azure DevOps Artifacts that can be collected and analyzed using Azure Monitor and Insights</em></p>
+<p><strong>​Package download metrics</strong> </p>
+<p>​● Number of package downloads </p>
+<p>​● Package download rates </p>
+<p>​● Average download size per package </p>
+<p>​● Package download time </p>
+<p>​● Top downloaders by IP address, user, or client </p>
+<p>​
+<strong>​Package publish metrics</strong> </p>
+<p>​● Number of package publishes </p>
+<p>​● Package publish rates </p>
+<p>​● Average publish size per package </p>
+<p>​● Package publish time </p>
+<p>​● Top publishers by IP address, user, or client </p>
+<p><strong>Package retention metrics</strong> </p>
+<p>​● Number of packages retained </p>
+<p>​● Retention rate </p>
+<p>​● Retention time </p>
+<p>​● Number of packages deleted </p>
+<p>​● Deletion rates </p>
+<p>​● Average time to deletion </p>
+<p><strong>Package security metrics</strong>  </p>
+<p>​● Vulnerability scan results </p>
+<p>​● Security alerts and notiﬁcations </p>
+<p>​● Number of packages with security issues </p>
+<p>​● Package access and permission control </p>
+<h1 id="here-are-some-alert-threshold-values-for-commonly-monitored-azure-resources">Here are some alert threshold values for commonly monitored Azure resources:</h1>
+<p><strong>Virtual Machines:</strong></p>
+<pre><code>• CPU Usage: Alert threshold could be set to 80% for a sustained period of time.
+
+• Memory Usage: Alert threshold could be set to 80% for a sustained period of time.
+
+• Disk Space Usage: Alert threshold could be set to 85% for a sustained period of time.
+
+• Network Usage: Alert threshold could be set to 80% for a sustained period of time.
+
+• Disk IOPS: Alert threshold could be set to 90% for a sustained period of time.
+</code></pre>
+<p><strong>Azure App Service:</strong></p>
+<pre><code>• CPU Utilization: 80% for sustained periods of time
+
+• Memory Utilization: 80% for sustained periods of time
+
+• HTTP 5xx error rate: 5% for sustained periods of time
+
+• HTTP 4xx error rate: 10% for sustained periods of time
+</code></pre>
+<p><strong>Azure Storage:</strong></p>
+<pre><code>• Queue Length: 1,000 for more than 5 minutes
+
+• Blob Capacity: 80% for sustained periods of time
+
+• Transaction Rate: 80% for sustained periods of time
+
+• Egress Bandwidth: 80% for sustained periods of time
+</code></pre>
+<p><strong>Azure Functions:</strong></p>
+<pre><code>• Execution Count: 100,000 within an hour
+
+• Average Execution Time: 5 seconds or greater
+
+• Memory Usage: 70% for sustained periods of time
+
+• Exception Count: 100 within an hour
+
+• HTTP 5xx Error Rate: 5% for sustained periods of time
+</code></pre>
+<p><strong>Azure App Configuration:</strong></p>
+<pre><code>• Configuration Changes: 10 configuration changes per hour
+
+• Configuration Latency: 500 milliseconds for fetch or update operations
+
+• Connection Failure: 5 connection failures per hour
+
+• Queries per Second: 100 configuration queries per second
+
+• Key or Value Size: Maximum key or value size of 1 MB
+</code></pre>
+<p><strong>Azure Event Hubs:</strong></p>
+<pre><code>• Incoming Messages: Alert threshold could be set to a specific number or rate of messages within a defined time period, such as 100,000 messages in 1 hour.
+
+• Outgoing Messages: Alert threshold could be set to a specific number or rate of messages within a defined time period, such as 50,000 messages in 30 minutes.
+
+• Active Connections: Alert threshold could be set to a specific number of active connections, such as 500 connections.
+
+• Throttled Requests: Alert threshold could be set to the number of requests that have been throttled, such as 500 requests in 1 hour.
+
+• Latency: Alert threshold could be set to a specific response time or average latency value, such as 500ms response time for incoming messages.
+</code></pre>
+<p><strong>Azure Active Directory</strong></p>
+<pre><code>• Failed Sign-In Attempts: Alert threshold could be set to a specific number of failed sign-in attempts within a defined time period, such as 10 failed attempts in 1 hour.
+
+• Password Resets: Alert threshold could be set to the number of password resets within a defined time period, such as 50 resets in 24 hours.
+
+• User Account Deletion: Alert threshold could be set to the number of user accounts deleted within a defined time period, such as 5 accounts in 1 day.
+
+• Multi-Factor Authentication: Alert threshold could be set to the number of successful or unsuccessful MFA attempts, such as 100 successful or unsuccessful attempts in 1 hour.
+
+• Directory Role Changes: Alert threshold could be set to the number of directory role changes, such as 10 changes in 1 hour.
+</code></pre>
+<p><strong>Azure keyvault</strong>
+```
+•  Key Vault Expiration: Set an alert threshold value to notify when a certificate, key or secret is about to expire, such as 30 days or 60 days before the expiration date.</p>
+<p>•  Key Vault Access: Set an alert threshold value to notify when there is an unusual amount of access to your Key Vault, such as more than 10 requests per second.</p>
+<p>•  Key Vault Authentication: Set an alert threshold value to notify when there is an unusual amount of authentication failures, such as more than 5 failed attempts in 1 hour.</p>
+<p>•  Key Vault Errors: Set an alert threshold value to notify when there is an unusual amount of errors, such as more than 10 errors per minute.</p>
+<p>•  Key Vault Latency: Set an alert threshold value to notify when there is an unusual amount of latency, such as more than 100 milliseconds for each request.</p>
+<p>```</p>
+<h1 id="who-should-receive-azure-resources-alert-notifications"><strong>Who should receive Azure Resources alert notifications</strong></h1>
+<ul>
+<li>
+<p><strong>Virtual Machines:</strong> Notifications can be sent to the DevOps team,
+    IT administrators, or security team.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>App Service:</strong> Notifications can be sent to the
+    development team, operations team, or project managers.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Storage:</strong> Notifications can be sent to the operations
+    team, IT administrators, or security team.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Virtual Network:</strong> Notifications can be sent to the
+    network administrators, security team, or IT administrators.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Key Vault:</strong> Notifications can be sent to the security
+    team, operations team, or DevOps team.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Functions:</strong> Notifications can be sent to the DevOps
+    team, development team, or project managers. They can be related to
+    issues with the Azure Functions service, such as errors in function
+    execution, function timeouts, or issues with function triggers.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Service Bus:</strong> Notifications can be sent to the
+    operations team, IT administrators, or security team. They can be
+    related to issues with the Service Bus service, such as message
+    delivery failures, connectivity issues, or issues with authorization
+    and access control.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Event Grid:</strong> Notifications can be sent to the DevOps
+    team, development team, or project managers. They can be related to
+    issues with the Event Grid service, such as event subscription
+    failures, event delivery issues, or issues with event schema
+    validation.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>Notification Hubs:</strong> Notifications can be sent to the
+    operations team, IT administrators, or security team. They can be
+    related to issues with the Notification Hubs service, such as
+    message delivery failures, connectivity issues, or issues with
+    authorization and access control.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>App Registration:</strong> Notifications can be sent to the
+    security team, operations team, or DevOps team. They can be related
+    to issues with App Registration, such as application authentication
+    failures, changes to application permissions, or changes to
+    application owners and contributors.</p>
+</li>
+<li>
+<p><strong>Azure</strong> <strong>App Configuration:</strong> Notifications can be sent to the
+    development team, operations team, or project managers. They can be
+    related to issues with App Configuration, such as changes to
+    configuration settings, changes to feature flags, or issues with
+    configuration data consistency and integrity.</p>
+</li>
+</ul>
+<p><strong>Cosmosdb:</strong></p>
+<ul>
+<li>
+<p><strong>Database administrators:</strong> If there is an alert related to
+    database performance or availability, the database administrator(s)
+    should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Developers:</strong> If there is an alert related to application
+    performance or errors, the developers responsible for the
+    application should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>IT Operations:</strong> If there is an alert related to infrastructure or
+    network issues, the IT operations team should receive the alert
+    notification.</p>
+</li>
+<li>
+<p><strong>Security personnel:</strong> If there is an alert related to security
+    events or breaches, the security personnel should receive the alert
+    notification.</p>
+</li>
+</ul>
+<h1 id="who-should-receive-azure-devops-alert-notifications"><strong>Who should receive Azure DevOps alert notifications</strong></h1>
+<ul>
+<li>
+<p><strong>Project administrators:</strong> If there is an alert related to project
+    settings, permissions, or access in Azure DevOps, the project
+    administrators should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Developers:</strong> If there is an alert related to build or release
+    failures, code quality issues, or code changes in Azure DevOps, the
+    developers responsible for the code should receive the alert
+    notification.</p>
+</li>
+<li>
+<p><strong>IT Operations:</strong> If there is an alert related to infrastructure or
+    network issues affecting the Azure DevOps service, the IT operations
+    team should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Security personnel:</strong> If there is an alert related to security
+    events or breaches in Azure DevOps, the security personnel should
+    receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Testers:</strong> If there is an alert related to test failures or issues
+    in Azure DevOps, the testers responsible for the tests should
+    receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Scrum masters or Agile coaches:</strong> If there is an alert related to
+    the progress or status of a sprint or agile project in Azure DevOps,
+    the scrum masters or agile coaches should receive the alert
+    notification.</p>
+</li>
+<li>
+<p><strong>Product owners or stakeholders:</strong> If there is an alert related to
+    a change or update in a product or feature in Azure DevOps, the
+    product owners or stakeholders should receive the alert
+    notification.</p>
+</li>
+<li>
+<p><strong>Support team:</strong> If there is an alert related to customer-reported
+    issues or bugs in Azure DevOps, the support team should receive the
+    alert notification.</p>
+</li>
+<li>
+<p><strong>Operations team:</strong> If there is an alert related to server or
+    application monitoring, the operations team should receive the alert
+    notification.</p>
+</li>
+<li>
+<p><strong>Database administrators:</strong> If there is an alert related to
+    database performance, capacity, or availability issues in Azure
+    DevOps, the database administrators should receive the alert
+    notification.</p>
+</li>
+<li>
+<p><strong>Business analysts:</strong> If there is an alert related to data
+    analytics, insights or reporting in Azure DevOps, the business
+    analysts should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Compliance team:</strong> If there is an alert related to compliance
+    violations or issues in Azure DevOps, the compliance team should
+    receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Disaster recovery team:</strong> If there is an alert related to disaster
+    recovery, backup or restore issues in Azure DevOps, the disaster
+    recovery team should receive the alert notification</p>
+</li>
+<li>
+<p><strong>Incident response team:</strong> If there is an alert related to security
+    or operational incidents in Azure DevOps, the incident response team
+    should receive the alert notification.</p>
+</li>
+</ul>
+<h1 id="who-should-receive-powerapps-tenant-or-environmrnts-alert-notifications"><strong>Who should receive PowerApps tenant or Environmrnts alert notifications</strong></h1>
+<ul>
+<li>
+<p><strong>PowerApps</strong> <strong>administrators:</strong> If there is an alert related to
+    the availability or performance of the PowerApps service, the
+    PowerApps administrators should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Developers:</strong> If there is an alert related to custom code or
+    functionality in PowerApps, the developers responsible for the code
+    should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>IT Operations:</strong> If there is an alert related to infrastructure or
+    network issues affecting the PowerApps service, the IT operations
+    team should receive the alert notification.</p>
+</li>
+<li>
+<p><strong>Security personnel:</strong> If there is an alert related to security
+    events or breaches in PowerApps, the security personnel should
+    receive the alert notification.</p>
+</li>
+</ul>
+<p><strong>How to Integrate alerts for all Azure resources.</strong></p>
+<blockquote>
+<p><strong>Here are the high-level steps to integrate alerts for all Azure resources using Azure Monitor:</strong></p>
+</blockquote>
+<p><strong>Create an Azure Monitor resource:</strong> First, you need to create an Azure
+Monitor resource in your Azure subscription. This resource acts as a
+central repository for all your monitoring data.</p>
+<p><strong>Enable Azure Monitor on all resources:</strong> Next, you need to enable
+Azure Monitor on all Azure resources that you want to monitor. This can
+be done using Azure Policy or by using Azure Resource Manager templates.</p>
+<p><strong>Configure data sources:</strong> Once you have enabled Azure Monitor on all
+resources, you can configure the data sources that you want to monitor.
+This can include Azure resources like virtual machines, Azure App
+Service, Azure Storage, Azure SQL, and many others.</p>
+<p><strong>Create alerts:</strong> After configuring the data sources, you can create
+alerts that are triggered based on certain conditions or thresholds. For
+example, you can create an alert that triggers when the CPU usage of a
+virtual machine exceeds a certain percentage.</p>
+<p><strong>Define alert criteria:</strong> You can define the criteria for when an alert
+should be triggered, such as thresholds, time periods, and severity
+levels.</p>
+<p><strong>Configure notification channels:</strong> Finally, you can configure
+notification channels for your alerts, such as email, SMS, or webhook.
+This ensures that the right people are notified when an alert is
+triggered.</p>
+<p><strong>Customize alerts:</strong> Azure Monitor allows you to customize alerts by
+defining complex conditions, using log queries, and creating
+multi-dimensional alerts that combine different metrics and data
+sources.</p>
+<p><strong>Analyze alert data:</strong> Azure Monitor provides rich analytics
+capabilities that allow you to analyze alert data, identify trends, and
+gain insights into your Azure environment. You can use log queries,
+visualizations, and machine learning algorithms to analyze your data and
+optimize your alert configuration.</p>
+<p><strong>Automate remediation:</strong> Azure Monitor also allows you to automate
+remediation actions, such as restarting a virtual machine, scaling out
+an application, or executing a runbook in Azure Automation. By
+automating remediation, you can minimize downtime and reduce the impact
+of issues on your applications and services.</p>
+<p><strong>Monitor third-party services:</strong> Azure Monitor can also be used to
+monitor third-party services and applications running outside of Azure.
+This can be done by integrating Azure Monitor with external monitoring
+solutions, such as Nagios or Zabbix, or by using Azure Monitor\'s
+extensibility framework to create custom monitoring solutions.</p>
+<h1 id="how-to-integrate-alerts-for-powerapps-tenants-environments-and-dataverse">How to Integrate alerts for Powerapps Tenants, Environments and dataverse</h1>
+<ol>
+<li>
+<p>Log in to the Power Platform Admin center
+(<a href="https://admin.powerplatform.microsoft.com">https://admin.powerplatform.microsoft.com</a>) with your admin
+credentials.</p>
+</li>
+<li>
+<p>From the left-hand navigation pane, select \"Environments\".</p>
+</li>
+<li>
+<p>Select the environment that you want to configure alerts for.</p>
+</li>
+<li>
+<p>Click on \"Settings\" in the top menu bar, and select \"Alerts\"
+from the dropdown menu.</p>
+</li>
+<li>
+<p>Click on \"Add alert rule\" to create a new alert rule.</p>
+</li>
+<li>
+<p>In the \"Add alert rule\" dialog box, enter a name for the alert
+rule, and select the severity level for the alert.</p>
+</li>
+<li>
+<p>Choose the type of resource you want to monitor by selecting the
+appropriate option from the \"Resource type\" dropdown list. You can
+choose from Power Apps, Power Automate, or Dataverse.</p>
+</li>
+<li>
+<p>Select the specific resource that you want to monitor from the
+\"Resource\" dropdown list. For example, if you selected Power Apps as
+the resource type, you can select a specific app to monitor.</p>
+</li>
+<li>
+<p>Select the conditions that will trigger the alert. You can choose
+from a variety of conditions, such as when the resource reaches a
+certain threshold of usage, when a specific action is performed, or when
+an error occurs.</p>
+</li>
+<li>
+<p>Choose the action that will be taken when the alert is triggered.
+You can choose to receive an email notification, a text message, or a
+push notification to your mobile device.</p>
+</li>
+<li>
+<p>Click \"Save\" to save the alert rule. </p>
+</li>
+<li>
+<p>Once the alert rule is saved, you can view it in the \"Alert
+rules\" section of the environment\'s settings.</p>
+</li>
+<li>
+<p>You can also edit or delete existing alert rules by selecting them
+from the \"Alert rules\" section and clicking on the appropriate button.</p>
+</li>
+</ol>
+<h1 id="how-to-integrate-alerts-for-azure-devops"><strong>How to Integrate alerts for Azure DevOps</strong></h1>
+<ol>
+<li>
+<p>Log in to the Azure DevOps portal (<a href="https://dev.azure.com">https://dev.azure.com</a>) with
+    your credentials.</p>
+</li>
+<li>
+<p>In the left-hand navigation pane, select the project for which you
+    want to configure alerts.</p>
+</li>
+<li>
+<p>Click on the \"Project settings\" gear icon in the bottom left
+    corner of the screen.</p>
+</li>
+<li>
+<p>Select \"Notifications\" under the \"General\" tab.</p>
+</li>
+<li>
+<p>Click on the \"New Subscription\" button to create a new alert
+    subscription.</p>
+</li>
+<li>
+<p>Choose the type of events that you want to receive alerts for. You
+    can select from a variety of events, such as when a work item is
+    created or updated, when a build completes, or when a pull request
+    is merged.</p>
+</li>
+<li>
+<p>Select the target for the alert. You can choose to send the alert to
+    a specific email address, to a group of email addresses, or to a
+    webhook URL.</p>
+</li>
+<li>
+<p>Configure the details of the alert subscription. Depending on the
+    type of event you selected, you may be asked to provide additional
+    information, such as the type of work item or build pipeline to
+    monitor.</p>
+</li>
+<li>
+<p>Click on the \"Create\" button to create the alert subscription.</p>
+</li>
+<li>
+<p>Once the alert subscription is created, you can view and manage it
+    under the \"Notifications\" tab.</p>
+</li>
+<li>
+<p>You can edit or delete existing alert subscriptions by selecting
+    them from the list and clicking on the appropriate button.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate \ud83c\udff7\ufe0f", "content.tooltips \ud83d\udca1", "navigation.indexes \ud83d\udcd1", "navigation.sections \ud83d\udcf0", "navigation.tabs \ud83d\udccc", "navigation.top \ud83c\udfe0", "navigation.tracking \ud83d\udccd", "search.highlight \ud83d\udd0d", "search.share \ud83d\udce4", "search.suggest \ud83e\udde9", "toc.follow \ud83d\udd0d"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
