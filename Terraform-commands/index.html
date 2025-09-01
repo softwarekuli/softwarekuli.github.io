@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../GitHub/gitcommands/">
+        <link rel="prev" href="../jenkins/">
       
       
-        <link rel="next" href="../AWS/aws/">
+        <link rel="next" href="../Azure/monitoring%20metrics/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -70,11 +70,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#docker-commands" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -1038,8 +1033,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1069,11 +1062,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
         
           
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
@@ -1089,7 +1082,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             Docker 🐳
@@ -1100,30 +1093,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overview 📘
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
         
   
   
@@ -1134,33 +1107,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#docker-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Commands
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1734,6 +1680,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1765,11 +1713,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" checked>
         
           
           <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="">
@@ -1785,7 +1733,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_8">
             <span class="md-nav__icon md-icon"></span>
             Terraform 🌍
@@ -1796,10 +1744,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Terraform-commands/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1810,6 +1765,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -2697,23 +2653,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#docker-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Commands
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2730,7 +2669,6 @@
 
   <h1>Overview 📘</h1>
 
-<h3 id="docker-commands">Docker Commands</h3>
 <table>
 <thead>
 <tr>
@@ -2742,103 +2680,138 @@
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td><code>docker build -t &lt;image_name&gt;:&lt;tag&gt; .</code></td>
-<td>🐳 <span style="color: #0099cc;">Build a Docker image with the specified name and tag from the current directory (Dockerfile location).</span></td>
+<td><code>Terraform init</code></td>
+<td><span style="color: green;">To initialize, provide the plugins, and require the dependency lock files.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td><code>docker run -p &lt;host_port&gt;:&lt;container_port&gt; &lt;image_name&gt;:&lt;tag&gt;</code></td>
-<td>🏃 <span style="color: #0099cc;">Run a Docker container based on the specified image, mapping a host port to a container port.</span></td>
+<td><code>Terraform init --upgrade</code></td>
+<td><span style="color: green;">Upgrade the version of the provided plugins.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td><code>docker ps</code></td>
-<td>📋 <span style="color: #0099cc;">List all running Docker containers.</span></td>
+<td><code>terraform get</code></td>
+<td><span style="color: green;">Download and update the dependencies.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td><code>docker ps -a</code></td>
-<td>📋 <span style="color: #0099cc;">List all Docker containers, including stopped ones.</span></td>
+<td><code>Terraform plan</code></td>
+<td><span style="color: green;">Execution of the providers in the Terraform configuration.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td><code>docker stop &lt;container_id_or_name&gt;</code></td>
-<td>⏹️ <span style="color: #0099cc;">Stop a running Docker container by its ID or name.</span></td>
+<td><code>Terraform apply</code></td>
+<td><span style="color: green;">Used to apply changes and create the infrastructure.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td><code>docker rm &lt;container_id_or_name&gt;</code></td>
-<td>🗑️ <span style="color: #0099cc;">Remove a stopped Docker container by its ID or name.</span></td>
+<td><code>Terraform apply -auto-approve</code></td>
+<td><span style="color: green;">Used to apply changes and create the infrastructure without approval.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
-<td><code>docker rmi &lt;image_name&gt;:&lt;tag&gt;</code></td>
-<td>🗑️ <span style="color: #0099cc;">Remove a Docker image by its name and tag.</span></td>
+<td><code>Terraform apply -replace=&lt;resource_name&gt;</code></td>
+<td><span style="color: green;">Used to replace a specific resource in your infrastructure.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
-<td><code>docker images</code></td>
-<td>📷 <span style="color: #0099cc;">List all Docker images on your system.</span></td>
+<td><code>Terraform workspace new</code></td>
+<td><span style="color: green;">To create a new workspace in your Terraform configuration.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">9</td>
-<td><code>docker pull &lt;image_name&gt;:&lt;tag&gt;</code></td>
-<td>⬇️ <span style="color: #0099cc;">Pull a Docker image from a Docker registry.</span></td>
+<td><code>Terraform workspace list</code></td>
+<td><span style="color: green;">To display the list of workspaces in your Terraform configuration.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">10</td>
-<td><code>docker push &lt;image_name&gt;:&lt;tag&gt;</code></td>
-<td>⬆️ <span style="color: #0099cc;">Push a Docker image to a Docker registry.</span></td>
+<td><code>Terraform workspace select &lt;workspace_name&gt;</code></td>
+<td><span style="color: green;">To switch to a different workspace in your Terraform configuration.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">11</td>
-<td><code>docker exec -it &lt;container_id_or_name&gt; &lt;command&gt;</code></td>
-<td>💻 <span style="color: #0099cc;">Execute a command in a running Docker container with interactive mode.</span></td>
+<td><code>Terraform workspace delete &lt;workspace_name&gt;</code></td>
+<td><span style="color: green;">To delete a specific workspace.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">12</td>
-<td><code>docker logs &lt;container_id_or_name&gt;</code></td>
-<td>📜 <span style="color: #0099cc;">View the logs of a running Docker container.</span></td>
+<td><code>Terraform workspace show</code></td>
+<td><span style="color: green;">To display the name of the current workspace.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">13</td>
-<td><code>docker network ls</code></td>
-<td>🌐 <span style="color: #0099cc;">List all Docker networks.</span></td>
+<td><code>Terraform import resource_name.attribute</code></td>
+<td><span style="color: green;">To import existing resources into a Terraform state file.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">14</td>
-<td><code>docker volume ls</code></td>
-<td>💾 <span style="color: #0099cc;">List all Docker volumes.</span></td>
+<td><code>Terraform show</code></td>
+<td><span style="color: green;">To display the current state of your infrastructure as represented by the Terraform state file.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">15</td>
-<td><code>docker-compose up</code></td>
-<td>🚀 <span style="color: #0099cc;">Start services defined in a Docker Compose file.</span></td>
+<td><code>Terraform destroy</code></td>
+<td><span style="color: green;">To destroy the total infrastructure created by Terraform.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">16</td>
-<td><code>docker-compose down</code></td>
-<td>⬇️ <span style="color: #0099cc;">Stop and remove services defined in a Docker Compose file.</span></td>
+<td><code>Terraform apply destroy --auto-approve</code></td>
+<td><span style="color: green;">To destroy resources without approval.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">17</td>
-<td><code>docker system prune</code></td>
-<td>🧹 <span style="color: #0099cc;">Remove all stopped containers, unused networks, and dangling images and volumes to free up disk space.</span></td>
+<td><code>Terraform providers</code></td>
+<td><span style="color: green;">To list currently installed providers on your system.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">18</td>
-<td><code>docker version</code></td>
-<td>ℹ️ <span style="color: #0099cc;">Display Docker version information.</span></td>
+<td><code>Terraform version</code></td>
+<td><span style="color: green;">To display the current version of Terraform.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">19</td>
-<td><code>docker info</code></td>
-<td>ℹ️ <span style="color: #0099cc;">Display Docker system-wide information.</span></td>
+<td><code>Terraform output</code></td>
+<td><span style="color: green;">To display the values of the output variables defined in your Terraform configuration.</span></td>
 </tr>
 <tr>
 <td style="text-align: center;">20</td>
-<td><code>docker --help</code></td>
-<td>❓ <span style="color: #0099cc;">Display Docker help and available commands.</span></td>
+<td><code>Terraform state pull</code></td>
+<td><span style="color: green;">To download the current state data.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td><code>Terraform state list</code></td>
+<td><span style="color: green;">To list all resources managed by Terraform.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td><code>Terraform validate</code></td>
+<td><span style="color: green;">To validate the syntax and configuration of Terraform files.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td><code>Terraform fmt</code></td>
+<td><span style="color: green;">To format Terraform configuration files in canonical and aligned format.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td><code>Terraform refresh</code></td>
+<td><span style="color: green;">To update only modified files in your Terraform configuration.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td><code>Terraform mv</code></td>
+<td><span style="color: green;">To move or rename files or directories in a Terraform configuration.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td><code>Terraform state push</code></td>
+<td><span style="color: green;">To upload the local state file to a remote state.</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td><code>Terraform providers lock</code></td>
+<td><span style="color: green;">To lock provider dependencies for a Terraform configuration.</span></td>
 </tr>
 </tbody>
 </table>
