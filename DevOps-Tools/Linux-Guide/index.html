@@ -12,9 +12,13 @@
         <meta name="author" content="Guduru Ramaprasad">
       
       
-        <link rel="canonical" href="https://softwarekuli.github.io/Docker/docker-full-notes/">
+        <link rel="canonical" href="https://softwarekuli.github.io/DevOps-Tools/Linux-Guide/">
       
       
+        <link rel="prev" href="../../projects/ml-data/">
+      
+      
+        <link rel="next" href="../Docker-Guide/">
       
       
         
@@ -25,7 +29,7 @@
     
     
       
-        <title>🚀 DevOps Docker Training Notes - Guduru Ramaprasad</title>
+        <title>Linux 🐧 - Guduru Ramaprasad</title>
       
     
     
@@ -76,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#devops-docker-training-notes" class="md-skip">
+        <a href="#linux" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🚀 DevOps Docker Training Notes
+              Linux 🐧
             
           </span>
         </div>
@@ -274,11 +278,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../DevOps-Tools/Linux-Guide/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -567,8 +573,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -594,19 +602,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -624,7 +635,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -639,10 +650,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../DevOps-Tools/Linux-Guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux 🐧
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -658,6 +696,482 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-linux-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Linux Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Linux Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-system-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File System Hierarchy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essential-linux-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Essential Linux Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-group-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User &amp; Group Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User &amp; Group Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Administration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Package Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debianubuntu-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debian/Ubuntu (apt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-hatcentos-yumdnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Hat/CentOS (yum/dnf)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Administration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#firewall-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Firewall Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-and-text-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File and Text Processing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File and Text Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-editing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text Editing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions &amp; Ownership
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissions &amp; Ownership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-scripting-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Scripting Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Scripting Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cron-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cron Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schedule-automated-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schedule Automated Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-cron-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Cron Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systemd Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-essential-linux-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary Table: Essential Linux Skills
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -670,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DevOps-Tools/Docker-Guide/" class="md-nav__link">
+      <a href="../Docker-Guide/" class="md-nav__link">
         
   
   
@@ -698,7 +1212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DevOps-Tools/AWS-Guide/" class="md-nav__link">
+      <a href="../AWS-Guide/" class="md-nav__link">
         
   
   
@@ -726,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DevOps-Tools/Terraform-Guide/" class="md-nav__link">
+      <a href="../Terraform-Guide/" class="md-nav__link">
         
   
   
@@ -754,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DevOps-Tools/Jenkins-Guide/" class="md-nav__link">
+      <a href="../Jenkins-Guide/" class="md-nav__link">
         
   
   
@@ -782,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DevOps-Tools/Monitoring-Guide/" class="md-nav__link">
+      <a href="../Monitoring-Guide/" class="md-nav__link">
         
   
   
@@ -826,17 +1340,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="">
             
   
   
@@ -1220,17 +1737,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
         
           
-          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="">
             
   
   
@@ -1370,17 +1890,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
         
           
-          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="">
             
   
   
@@ -2256,22 +2779,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#day-1-traditional-vs-containerized-deployment" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📅 Day 1 — Traditional vs Containerized Deployment
+        Overview
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📅 Day 1 — Traditional vs Containerized Deployment">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-linux-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Linux Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Linux Concepts">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#traditional-deployment-old-deployment" class="md-nav__link">
+  <a href="#file-system-hierarchy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Traditional Deployment / Old Deployment
+        File System Hierarchy
       
     </span>
   </a>
@@ -2279,33 +2813,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#virtualized-deployment" class="md-nav__link">
+  <a href="#file-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🖥️ Virtualized Deployment
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🖥️ Virtualized Deployment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#vm-disadvantages" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ❌ VM Disadvantages:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔴 Summary:
+        File Permissions
       
     </span>
   </a>
@@ -2316,24 +2827,35 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#containerized-deployment" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#essential-linux-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📦 Containerized Deployment
+        Essential Linux Commands
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📦 Containerized Deployment">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-group-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User &amp; Group Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User &amp; Group Management">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-a-container" class="md-nav__link">
+  <a href="#user-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧱 What is a Container?
+        User Management
       
     </span>
   </a>
@@ -2341,10 +2863,38 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
+  <a href="#group-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🛠️ Use Cases:
+        Group Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Administration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Administration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Management
       
     </span>
   </a>
@@ -2352,10 +2902,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#isolation" class="md-nav__link">
+  <a href="#package-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔐 Isolation:
+        Package Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debianubuntu-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debian/Ubuntu (apt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#red-hatcentos-yumdnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Hat/CentOS (yum/dnf)
       
     </span>
   </a>
@@ -2373,34 +2946,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#day-2-container-types-and-tools" class="md-nav__link">
+  <a href="#process-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📅 Day 2 — Container Types and Tools
+        Process Management
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📅 Day 2 — Container Types and Tools">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Administration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Administration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#container-use-cases" class="md-nav__link">
+  <a href="#network-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧰 Container Use Cases:
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧰 Container Use Cases:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#web-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🌐 Web Servers:
+        Network Configuration
       
     </span>
   </a>
@@ -2408,98 +2980,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#application-servers" class="md-nav__link">
+  <a href="#firewall-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💻 Application Servers:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#database-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🗄️ Database Servers:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#messaging-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✉️ Messaging Servers:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🛠️ Other Tools:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#containerization-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🐳 Containerization Tools:
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🐳 Containerization Tools:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#runtime-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔧 Runtime Tools:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orchestration-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📦 Orchestration Tools:
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-editions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🐳 Docker Editions:
+        Firewall Management
       
     </span>
   </a>
@@ -2512,22 +2996,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#day-3-docker-setup-runtime" class="md-nav__link">
+  <a href="#file-and-text-processing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📅 Day 3 — Docker Setup &amp; Runtime
+        File and Text Processing
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📅 Day 3 — Docker Setup &amp; Runtime">
+    <nav class="md-nav" aria-label="File and Text Processing">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#container-limits" class="md-nav__link">
+  <a href="#text-editing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Container Limits
+        Text Editing
       
     </span>
   </a>
@@ -2535,32 +3019,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#os-compatibility" class="md-nav__link">
+  <a href="#text-processing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧩 OS Compatibility:
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-daemon" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔧 Docker Daemon
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-docker-on-ubuntu-aws" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🧰 Installing Docker on Ubuntu (AWS):
+        Text Processing
       
     </span>
   </a>
@@ -2569,6 +3031,206 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions &amp; Ownership
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissions &amp; Ownership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permission-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permission Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-scripting-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shell Scripting Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Scripting Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Script Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cron-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cron Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cron Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schedule-automated-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schedule Automated Tasks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-cron-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Cron Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-tuning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Tuning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systemd Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table-essential-linux-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary Table: Essential Linux Skills
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2589,233 +3251,621 @@
 
 
 
-<h1 id="devops-docker-training-notes">🚀 DevOps Docker Training Notes<a class="headerlink" href="#devops-docker-training-notes" title="Permanent link">&para;</a></h1>
+<h1 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Linux is the backbone of modern DevOps infrastructure, providing a stable, open-source operating system for servers, containers, and cloud platforms.</p>
 <hr />
-<h2 id="day-1-traditional-vs-containerized-deployment">📅 Day 1 — Traditional vs Containerized Deployment<a class="headerlink" href="#day-1-traditional-vs-containerized-deployment" title="Permanent link">&para;</a></h2>
+<h2 id="core-linux-concepts">Core Linux Concepts<a class="headerlink" href="#core-linux-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="file-system-hierarchy">File System Hierarchy<a class="headerlink" href="#file-system-hierarchy" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>/
+├── /bin          → Essential executables
+├── /etc          → Configuration files
+├── /home         → User home directories
+├── /var          → Variable data (logs, cache)
+├── /tmp          → Temporary files
+├── /usr          → User programs and libraries
+├── /opt          → Optional software packages
+└── /root         → Root user home directory
+</code></pre></div>
+<h3 id="file-permissions">File Permissions<a class="headerlink" href="#file-permissions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Symbolic representation: rwxrwxrwx (owner-group-others)</span>
+<span class="c1"># Numeric: 755 = rwxr-xr-x</span>
+
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>script.sh<span class="w">          </span><span class="c1"># Make executable</span>
+chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>config.conf<span class="w">        </span><span class="c1"># Read/write for owner, read for others</span>
+chown<span class="w"> </span>user:group<span class="w"> </span>file.txt<span class="w">    </span><span class="c1"># Change ownership</span>
+</code></pre></div>
 <hr />
-<h3 id="traditional-deployment-old-deployment">🏗️ Traditional Deployment / Old Deployment<a class="headerlink" href="#traditional-deployment-old-deployment" title="Permanent link">&para;</a></h3>
+<h2 id="essential-linux-commands">Essential Linux Commands<a class="headerlink" href="#essential-linux-commands" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Command</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Navigation</strong></td>
+<td><code>cd</code></td>
+<td>Change directory</td>
+<td><code>cd /home/user/projects</code></td>
+</tr>
+<tr>
+<td><strong>Navigation</strong></td>
+<td><code>pwd</code></td>
+<td>Print working directory</td>
+<td><code>pwd</code></td>
+</tr>
+<tr>
+<td><strong>File Listing</strong></td>
+<td><code>ls -la</code></td>
+<td>List detailed files</td>
+<td><code>ls -la /etc</code></td>
+</tr>
+<tr>
+<td><strong>File Creation</strong></td>
+<td><code>touch</code></td>
+<td>Create empty file</td>
+<td><code>touch new_file.txt</code></td>
+</tr>
+<tr>
+<td><strong>File Content</strong></td>
+<td><code>cat</code></td>
+<td>Display file content</td>
+<td><code>cat config.yml</code></td>
+</tr>
+<tr>
+<td><strong>File Search</strong></td>
+<td><code>find</code></td>
+<td>Search files</td>
+<td><code>find / -name "*.log"</code></td>
+</tr>
+<tr>
+<td><strong>Text Search</strong></td>
+<td><code>grep</code></td>
+<td>Search text patterns</td>
+<td><code>grep -r "error" /var/log</code></td>
+</tr>
+<tr>
+<td><strong>File Copy</strong></td>
+<td><code>cp</code></td>
+<td>Copy files/directories</td>
+<td><code>cp -r src/ dest/</code></td>
+</tr>
+<tr>
+<td><strong>File Move</strong></td>
+<td><code>mv</code></td>
+<td>Move/rename files</td>
+<td><code>mv old.txt new.txt</code></td>
+</tr>
+<tr>
+<td><strong>File Delete</strong></td>
+<td><code>rm</code></td>
+<td>Remove files</td>
+<td><code>rm -rf /tmp/old_data</code></td>
+</tr>
+<tr>
+<td><strong>Disk Usage</strong></td>
+<td><code>du -sh</code></td>
+<td>Directory size</td>
+<td><code>du -sh /var/log</code></td>
+</tr>
+<tr>
+<td><strong>Disk Space</strong></td>
+<td><code>df -h</code></td>
+<td>Filesystem usage</td>
+<td><code>df -h</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h3 id="virtualized-deployment">🖥️ Virtualized Deployment<a class="headerlink" href="#virtualized-deployment" title="Permanent link">&para;</a></h3>
-<h4 id="vm-disadvantages">❌ VM Disadvantages:<a class="headerlink" href="#vm-disadvantages" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Each VM needs its own OS → high CPU, memory, and storage consumption.</li>
-<li>Higher cost for enterprise OS editions.</li>
-<li>Can deploy multiple applications in one VM, <strong>but no isolation</strong>.</li>
-<li>Middleware conflicts — can't run multiple versions (e.g., Java 11 vs Java 17).</li>
-<li>Environment inconsistencies (e.g., config files, env variables).</li>
-<li>AMIs can help maintain consistency but still require full OS per VM.</li>
-</ul>
-<h4 id="summary">🔴 Summary:<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Each VM → full OS → high cost and compute usage.</li>
-<li>Middleware/software compatibility issues.</li>
-<li>No proper isolation for apps within same VM.</li>
-</ul>
+<h2 id="user-group-management">User &amp; Group Management<a class="headerlink" href="#user-group-management" title="Permanent link">&para;</a></h2>
+<h3 id="user-management">User Management<a class="headerlink" href="#user-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create new user</span>
+sudo<span class="w"> </span>useradd<span class="w"> </span>-m<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span>john
+
+<span class="c1"># Add user to group</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>john
+
+<span class="c1"># Set user password</span>
+sudo<span class="w"> </span>passwd<span class="w"> </span>john
+
+<span class="c1"># Delete user</span>
+sudo<span class="w"> </span>userdel<span class="w"> </span>-r<span class="w"> </span>john
+
+<span class="c1"># List all users</span>
+cat<span class="w"> </span>/etc/passwd
+</code></pre></div>
+<h3 id="group-management">Group Management<a class="headerlink" href="#group-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create group</span>
+sudo<span class="w"> </span>groupadd<span class="w"> </span>developers
+
+<span class="c1"># Add user to group</span>
+sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>developers<span class="w"> </span>john
+
+<span class="c1"># List groups</span>
+cat<span class="w"> </span>/etc/group
+
+<span class="c1"># Groups for current user</span>
+groups
+</code></pre></div>
 <hr />
-<h3 id="containerized-deployment">📦 Containerized Deployment<a class="headerlink" href="#containerized-deployment" title="Permanent link">&para;</a></h3>
-<h4 id="what-is-a-container">🧱 What is a Container?<a class="headerlink" href="#what-is-a-container" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Includes: App code + dependencies + config files + env variables.</li>
-<li>Containers <strong>share the host OS</strong> (no separate OS required).</li>
-<li>Each container has its own OS libraries → interacts with OS kernel.</li>
-<li>Multiple containers can run on a single host OS.</li>
-</ul>
-<h4 id="use-cases">🛠️ Use Cases:<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Applications</li>
-<li>Databases</li>
-<li>Tools (e.g., Jenkins, Nexus)</li>
-</ul>
-<h4 id="isolation">🔐 Isolation:<a class="headerlink" href="#isolation" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Container runtime provides:</li>
-<li>Separate process space</li>
-<li>Network space</li>
-<li>Storage space</li>
-<li>Mount space</li>
-<li>High CPU → container may hang.</li>
-<li>Out of memory → container is killed by OS (via <strong>cgroups</strong>).</li>
-</ul>
+<h2 id="system-administration">System Administration<a class="headerlink" href="#system-administration" title="Permanent link">&para;</a></h2>
+<h3 id="service-management">Service Management<a class="headerlink" href="#service-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
+
+<span class="c1"># Stop service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>nginx
+
+<span class="c1"># Restart service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nginx
+
+<span class="c1"># Enable service on boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
+
+<span class="c1"># Check service status</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
+
+<span class="c1"># List all services</span>
+systemctl<span class="w"> </span>list-units<span class="w"> </span>--type<span class="o">=</span>service
+</code></pre></div>
+<h3 id="package-management">Package Management<a class="headerlink" href="#package-management" title="Permanent link">&para;</a></h3>
+<h4 id="debianubuntu-apt">Debian/Ubuntu (apt)<a class="headerlink" href="#debianubuntu-apt" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update package list</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Install package</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>curl<span class="w"> </span>wget
+
+<span class="c1"># Remove package</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>git
+
+<span class="c1"># Upgrade all packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># Search for package</span>
+apt<span class="w"> </span>search<span class="w"> </span>nginx
+</code></pre></div>
+<h4 id="red-hatcentos-yumdnf">Red Hat/CentOS (yum/dnf)<a class="headerlink" href="#red-hatcentos-yumdnf" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install package</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>git
+
+<span class="c1"># Remove package</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>remove<span class="w"> </span>git
+
+<span class="c1"># List installed packages</span>
+yum<span class="w"> </span>list<span class="w"> </span>installed
+
+<span class="c1"># Update packages</span>
+sudo<span class="w"> </span>yum<span class="w"> </span>update
+</code></pre></div>
 <hr />
-<h2 id="day-2-container-types-and-tools">📅 Day 2 — Container Types and Tools<a class="headerlink" href="#day-2-container-types-and-tools" title="Permanent link">&para;</a></h2>
+<h2 id="process-management">Process Management<a class="headerlink" href="#process-management" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># List running processes</span>
+ps<span class="w"> </span>aux
+
+<span class="c1"># Display processes in tree format</span>
+pstree
+
+<span class="c1"># Kill process by PID</span>
+<span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">1234</span>
+
+<span class="c1"># Kill process by name</span>
+pkill<span class="w"> </span>-f<span class="w"> </span>nginx
+
+<span class="c1"># Display top processes</span>
+top
+
+<span class="c1"># Send signal to process</span>
+<span class="nb">kill</span><span class="w"> </span>-SIGTERM<span class="w"> </span><span class="m">1234</span>
+</code></pre></div>
 <hr />
-<h3 id="container-use-cases">🧰 Container Use Cases:<a class="headerlink" href="#container-use-cases" title="Permanent link">&para;</a></h3>
-<h4 id="web-servers">🌐 Web Servers:<a class="headerlink" href="#web-servers" title="Permanent link">&para;</a></h4>
-<ul>
-<li>HTTPD, NGINX, HAProxy</li>
-</ul>
-<h4 id="application-servers">💻 Application Servers:<a class="headerlink" href="#application-servers" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Java, Python, Node.js, JBoss, Tomcat, Go</li>
-</ul>
-<h4 id="database-servers">🗄️ Database Servers:<a class="headerlink" href="#database-servers" title="Permanent link">&para;</a></h4>
-<ul>
-<li>MySQL, Oracle, MongoDB, PostgreSQL, Couchbase, Cassandra</li>
-</ul>
-<h4 id="messaging-servers">✉️ Messaging Servers:<a class="headerlink" href="#messaging-servers" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Kafka, RabbitMQ</li>
-</ul>
-<h4 id="other-tools">🛠️ Other Tools:<a class="headerlink" href="#other-tools" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Jenkins, Nexus, SonarQube</li>
-</ul>
+<h2 id="network-administration">Network Administration<a class="headerlink" href="#network-administration" title="Permanent link">&para;</a></h2>
+<h3 id="network-configuration">Network Configuration<a class="headerlink" href="#network-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display network interfaces</span>
+ip<span class="w"> </span>addr<span class="w"> </span>show
+
+<span class="c1"># Check IP configuration</span>
+ifconfig
+
+<span class="c1"># Display routing table</span>
+ip<span class="w"> </span>route<span class="w"> </span>show
+route<span class="w"> </span>-n
+
+<span class="c1"># Test connectivity</span>
+ping<span class="w"> </span><span class="m">8</span>.8.8.8
+
+<span class="c1"># DNS lookup</span>
+nslookup<span class="w"> </span>google.com
+dig<span class="w"> </span>google.com
+
+<span class="c1"># Check open ports</span>
+sudo<span class="w"> </span>netstat<span class="w"> </span>-tlnp
+ss<span class="w"> </span>-tlnp
+</code></pre></div>
+<h3 id="firewall-management">Firewall Management<a class="headerlink" href="#firewall-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check UFW status</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>status
+
+<span class="c1"># Enable UFW</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span><span class="nb">enable</span>
+
+<span class="c1"># Allow SSH</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span>/tcp
+
+<span class="c1"># Allow HTTP/HTTPS</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp
+sudo<span class="w"> </span>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp
+
+<span class="c1"># Deny service</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>deny<span class="w"> </span><span class="m">8080</span>/tcp
+
+<span class="c1"># List rules</span>
+sudo<span class="w"> </span>ufw<span class="w"> </span>show<span class="w"> </span>added
+</code></pre></div>
 <hr />
-<h3 id="containerization-tools">🐳 Containerization Tools:<a class="headerlink" href="#containerization-tools" title="Permanent link">&para;</a></h3>
-<h4 id="runtime-tools">🔧 Runtime Tools:<a class="headerlink" href="#runtime-tools" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Docker</li>
-<li>Podman</li>
-<li>containerd</li>
-</ul>
-<h4 id="orchestration-tools">📦 Orchestration Tools:<a class="headerlink" href="#orchestration-tools" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Docker Swarm</li>
-<li>Kubernetes</li>
-<li>OpenShift</li>
-</ul>
+<h2 id="file-and-text-processing">File and Text Processing<a class="headerlink" href="#file-and-text-processing" title="Permanent link">&para;</a></h2>
+<h3 id="text-editing">Text Editing<a class="headerlink" href="#text-editing" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Edit file with nano</span>
+nano<span class="w"> </span>config.txt
+
+<span class="c1"># Edit file with vim</span>
+vim<span class="w"> </span>config.txt
+
+<span class="c1"># Quick edit with sed</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/old_text/new_text/g&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># View file with less</span>
+less<span class="w"> </span>large_file.log
+
+<span class="c1"># Display first 10 lines</span>
+head<span class="w"> </span>-10<span class="w"> </span>file.txt
+
+<span class="c1"># Display last 10 lines</span>
+tail<span class="w"> </span>-10<span class="w"> </span>file.txt
+
+<span class="c1"># Follow file in real-time</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog
+</code></pre></div>
+<h3 id="text-processing">Text Processing<a class="headerlink" href="#text-processing" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Count lines, words, characters</span>
+wc<span class="w"> </span>-l<span class="w"> </span>file.txt
+
+<span class="c1"># Sort lines</span>
+sort<span class="w"> </span>file.txt
+
+<span class="c1"># Remove duplicates</span>
+sort<span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq
+
+<span class="c1"># Print specific columns</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $1, $3}&#39;</span><span class="w"> </span>file.txt
+
+<span class="c1"># Replace text</span>
+sed<span class="w"> </span><span class="s1">&#39;s/pattern/replacement/g&#39;</span><span class="w"> </span>file.txt
+</code></pre></div>
 <hr />
-<h3 id="docker-editions">🐳 Docker Editions:<a class="headerlink" href="#docker-editions" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Community Edition</strong> — Free</li>
-<li><strong>Enterprise Edition</strong> — Paid</li>
-<li><strong>DTR</strong>: Docker Trusted Registry</li>
-<li><strong>UCP</strong>: Universal Control Plane (GUI for managing containers)</li>
-</ol>
-<blockquote>
-<p>Docker images built on any OS or flavor (RHEL, Ubuntu, etc.) can be stored in registries like Nexus/ECR and run on any platform.</p>
-</blockquote>
+<h2 id="permissions-ownership">Permissions &amp; Ownership<a class="headerlink" href="#permissions-ownership" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Number</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Read (r)</strong></td>
+<td>4</td>
+<td>View file contents</td>
+</tr>
+<tr>
+<td><strong>Write (w)</strong></td>
+<td>2</td>
+<td>Modify file contents</td>
+</tr>
+<tr>
+<td><strong>Execute (x)</strong></td>
+<td>1</td>
+<td>Run file/access directory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permission-examples">Permission Examples<a class="headerlink" href="#permission-examples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Owner: rwx (7), Group: rx (5), Others: rx (5)</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>script.sh
+
+<span class="c1"># Owner: rw (6), Group: rw (6), Others: (0)</span>
+chmod<span class="w"> </span><span class="m">660</span><span class="w"> </span>config.txt
+
+<span class="c1"># Add execute for group</span>
+chmod<span class="w"> </span>g+x<span class="w"> </span>script.sh
+
+<span class="c1"># Remove write for others</span>
+chmod<span class="w"> </span>o-w<span class="w"> </span>file.txt
+
+<span class="c1"># Recursive permission change</span>
+chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/html
+</code></pre></div>
 <hr />
-<h2 id="day-3-docker-setup-runtime">📅 Day 3 — Docker Setup &amp; Runtime<a class="headerlink" href="#day-3-docker-setup-runtime" title="Permanent link">&para;</a></h2>
+<h2 id="shell-scripting-basics">Shell Scripting Basics<a class="headerlink" href="#shell-scripting-basics" title="Permanent link">&para;</a></h2>
+<h3 id="simple-script">Simple Script<a class="headerlink" href="#simple-script" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Define variables</span>
+<span class="nv">NAME</span><span class="o">=</span><span class="s2">&quot;DevOps Team&quot;</span>
+<span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>
+
+<span class="c1"># Display message</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Welcome to </span><span class="nv">$NAME</span><span class="s2">&quot;</span>
+
+<span class="c1"># Conditional statement</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;config.txt&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Config file exists&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Config file not found&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Loop through files</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.log<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Processing </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+
+<span class="c1"># Function definition</span>
+backup_data<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Backing up data...&quot;</span>
+<span class="w">    </span>tar<span class="w"> </span>-czf<span class="w"> </span>backup.tar.gz<span class="w"> </span>/data
+<span class="o">}</span>
+
+backup_data
+</code></pre></div>
+<h3 id="script-execution">Script Execution<a class="headerlink" href="#script-execution" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Make script executable</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>script.sh
+
+<span class="c1"># Run script</span>
+./script.sh
+
+<span class="c1"># Run with bash explicitly</span>
+bash<span class="w"> </span>script.sh
+
+<span class="c1"># Run in background</span>
+./script.sh<span class="w"> </span><span class="p">&amp;</span>
+
+<span class="c1"># Run with nohup (ignore hangup)</span>
+nohup<span class="w"> </span>./script.sh<span class="w"> </span><span class="p">&amp;</span>
+</code></pre></div>
 <hr />
-<h3 id="container-limits">🚀 Container Limits<a class="headerlink" href="#container-limits" title="Permanent link">&para;</a></h3>
+<h2 id="system-monitoring">System Monitoring<a class="headerlink" href="#system-monitoring" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display system uptime</span>
+uptime
+
+<span class="c1"># View system info</span>
+uname<span class="w"> </span>-a
+
+<span class="c1"># Check CPU info</span>
+lscpu
+
+<span class="c1"># Check memory usage</span>
+free<span class="w"> </span>-h
+
+<span class="c1"># Monitor real-time system stats</span>
+top
+
+<span class="c1"># View system logs</span>
+journalctl<span class="w"> </span>-xe
+
+<span class="c1"># Check disk I/O</span>
+iostat
+
+<span class="c1"># Monitor network traffic</span>
+iftop
+nethogs
+</code></pre></div>
+<hr />
+<h2 id="security-best-practices">Security Best Practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Practice</th>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SSH Key Auth</strong></td>
+<td><code>ssh-keygen -t rsa -b 4096</code></td>
+<td>Secure authentication</td>
+</tr>
+<tr>
+<td><strong>Disable Root Login</strong></td>
+<td><code>PermitRootLogin no</code> in sshd_config</td>
+<td>Reduce attack surface</td>
+</tr>
+<tr>
+<td><strong>Fail2Ban</strong></td>
+<td><code>sudo apt install fail2ban</code></td>
+<td>Prevent brute force</td>
+</tr>
+<tr>
+<td><strong>SELinux/AppArmor</strong></td>
+<td>Enable security module</td>
+<td>Mandatory access control</td>
+</tr>
+<tr>
+<td><strong>Regular Updates</strong></td>
+<td><code>sudo apt update &amp;&amp; apt upgrade</code></td>
+<td>Security patches</td>
+</tr>
+<tr>
+<td><strong>Audit Logging</strong></td>
+<td><code>auditctl -w /etc/passwd</code></td>
+<td>Monitor changes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cron-jobs">Cron Jobs<a class="headerlink" href="#cron-jobs" title="Permanent link">&para;</a></h2>
+<h3 id="schedule-automated-tasks">Schedule Automated Tasks<a class="headerlink" href="#schedule-automated-tasks" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Edit crontab</span>
+crontab<span class="w"> </span>-e
+
+<span class="c1"># List user&#39;s cron jobs</span>
+crontab<span class="w"> </span>-l
+
+<span class="c1"># Remove all cron jobs</span>
+crontab<span class="w"> </span>-r
+
+<span class="c1"># Cron syntax</span>
+<span class="c1"># MIN HOUR DAY MONTH WEEKDAY COMMAND</span>
+<span class="c1"># 0   0    1   1     *       /backup.sh</span>
+</code></pre></div>
+<h3 id="common-cron-examples">Common Cron Examples<a class="headerlink" href="#common-cron-examples" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schedule</th>
+<th>Cron Expression</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Every minute</strong></td>
+<td><code>* * * * * command</code></td>
+<td>Frequent checks</td>
+</tr>
+<tr>
+<td><strong>Every hour</strong></td>
+<td><code>0 * * * * command</code></td>
+<td>Hourly tasks</td>
+</tr>
+<tr>
+<td><strong>Daily at 2 AM</strong></td>
+<td><code>0 2 * * * command</code></td>
+<td>Daily backup</td>
+</tr>
+<tr>
+<td><strong>Weekly (Sunday)</strong></td>
+<td><code>0 0 * * 0 command</code></td>
+<td>Weekly maintenance</td>
+</tr>
+<tr>
+<td><strong>Monthly (1st)</strong></td>
+<td><code>0 0 1 * * command</code></td>
+<td>Monthly report</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="advanced-topics">Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permanent link">&para;</a></h2>
+<h3 id="system-tuning">System Tuning<a class="headerlink" href="#system-tuning" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display kernel parameters</span>
+sysctl<span class="w"> </span>-a
+
+<span class="c1"># Set kernel parameter</span>
+sudo<span class="w"> </span>sysctl<span class="w"> </span>-w<span class="w"> </span>net.ipv4.ip_forward<span class="o">=</span><span class="m">1</span>
+
+<span class="c1"># Make persistent</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;net.ipv4.ip_forward=1&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/sysctl.conf
+sysctl<span class="w"> </span>-p
+</code></pre></div>
+<h3 id="log-management">Log Management<a class="headerlink" href="#log-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># View system logs</span>
+journalctl
+
+<span class="c1"># Follow logs in real-time</span>
+journalctl<span class="w"> </span>-f
+
+<span class="c1"># Filter by priority</span>
+journalctl<span class="w"> </span>-p<span class="w"> </span>err
+
+<span class="c1"># Export logs</span>
+journalctl<span class="w"> </span>--since<span class="w"> </span><span class="s2">&quot;2 days ago&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>export.log
+</code></pre></div>
+<h3 id="systemd-services">Systemd Services<a class="headerlink" href="#systemd-services" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create custom service</span>
+sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/myapp.service
+
+<span class="c1"># Reload systemd</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+
+<span class="c1"># Enable service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>myapp
+
+<span class="c1"># Start service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>myapp
+</code></pre></div>
+<hr />
+<h2 id="summary-table-essential-linux-skills">Summary Table: Essential Linux Skills<a class="headerlink" href="#summary-table-essential-linux-skills" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Importance</th>
+<th>Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>File Navigation</strong></td>
+<td>Critical</td>
+<td>cd, ls, pwd</td>
+</tr>
+<tr>
+<td><strong>User Management</strong></td>
+<td>Critical</td>
+<td>useradd, usermod, passwd</td>
+</tr>
+<tr>
+<td><strong>Package Management</strong></td>
+<td>Critical</td>
+<td>apt, yum</td>
+</tr>
+<tr>
+<td><strong>Service Management</strong></td>
+<td>High</td>
+<td>systemctl, service</td>
+</tr>
+<tr>
+<td><strong>Network Config</strong></td>
+<td>High</td>
+<td>ip, ifconfig, netstat</td>
+</tr>
+<tr>
+<td><strong>Process Management</strong></td>
+<td>High</td>
+<td>ps, kill, top</td>
+</tr>
+<tr>
+<td><strong>Shell Scripting</strong></td>
+<td>High</td>
+<td>bash, sh</td>
+</tr>
+<tr>
+<td><strong>Log Analysis</strong></td>
+<td>Medium</td>
+<td>grep, tail, journalctl</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>High</td>
+<td>ssh, chmod, firewall</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Number of containers depends on available CPU and RAM.</li>
+<li><a href="https://www.linuxfoundation.org/">Linux Foundation</a></li>
+<li><a href="https://help.ubuntu.com/">Ubuntu Documentation</a></li>
+<li><a href="https://www.redhat.com/en/services/training/ex200-red-hat-certified-system-administrator-rhcsa-exam">Red Hat Certified System Administrator (RHCSA)</a></li>
 </ul>
-<h3 id="os-compatibility">🧩 OS Compatibility:<a class="headerlink" href="#os-compatibility" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Best OS for Docker: <strong>Ubuntu</strong></li>
-<li>Docker <strong>not compatible with RHEL</strong> in production (no support).</li>
-</ul>
-<hr />
-<h3 id="docker-daemon">🔧 Docker Daemon<a class="headerlink" href="#docker-daemon" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Background service managing:</li>
-<li>Docker images</li>
-<li>Containers</li>
-<li>Networks</li>
-<li>Volumes</li>
-</ul>
-<hr />
-<h3 id="installing-docker-on-ubuntu-aws">🧰 Installing Docker on Ubuntu (AWS):<a class="headerlink" href="#installing-docker-on-ubuntu-aws" title="Permanent link">&para;</a></h3>
-<p>```bash
-sudo apt update -y
-sudo apt install docker.io -y
-sudo service docker start
-docker info
-Regular users will face permission issues.</p>
-<p>✅ Add User to Docker Group:
-bash
-Copy code
-sudo usermod -aG docker $USER</p>
-<h1 id="or">OR<a class="headerlink" href="#or" title="Permanent link">&para;</a></h1>
-<p>sudo usermod -aG docker ubuntu
-Logout and SSH again. Then run:</p>
-<p>bash
-Copy code
-docker ps
-📅 Class 4 — Docker Registries
-🐋 Docker Image Storage
-🔐 Secure Registries:
-Use HTTPS for registries like Nexus, ECR.</p>
-<p>Docker Hub provides only one private repo → limited use in real-time.</p>
-<p>📁 Docker Concepts
-Registry: Central image storage.</p>
-<p>Repository: Collection of related images (usually different versions).</p>
-<p>🔄 Image Pull Behavior:
-If registry not mentioned:</p>
-<p>Docker checks local</p>
-<p>Else pulls from Docker Hub</p>
-<p>☁️ Create Repos in Nexus / ECR
-🔹 ECR:
-Image format:
-registryURL/repository:tag</p>
-<p>🔹 Nexus:
-Go to Settings → Repositories → Create Repository → Docker (hosted)</p>
-<p>Use port 8083 for reverse proxy</p>
-<p>⚠️ Insecure Registry Configuration:
-If using HTTP (insecure) registry:</p>
-<p>Edit the daemon config:</p>
-<p>bash
-Copy code
-sudo vi /etc/docker/daemon.json
-Add:</p>
-<p>json
-Copy code
-{
-  "insecure-registries": ["<your-nexus-ip>:8083"]
-}
-📝 If using for practice, and IP changes after restarting Nexus, you'll need to update the IP in daemon.json.</p>
-<p>📅 Day 5 — Docker Image Build &amp; Deployment
-✅ Docker Advantages:
-Easy to share &amp; deploy using Docker images</p>
-<p>Lightweight — shares host OS, saves resources</p>
-<p>Version management</p>
-<p>Middleware compatibility solved</p>
-<p>🛠️ Docker Build Server Setup:
-Install the following on Docker build server:</p>
-<p>Docker</p>
-<p>Git</p>
-<p>Maven</p>
-<p>Java</p>
-<p>Don't write Dockerfiles directly on Docker server.</p>
-<p>📁 Real-Time Workflow:
-Write Dockerfile in project repo.</p>
-<p>Commit &amp; push to GitHub.</p>
-<p>Clone repo to Docker build server.</p>
-<p>Build image and push to registry (ECR/Nexus).</p>
-<p>Another deployment server pulls image and runs container.</p>
-<p>🔗 Build and deploy happen on different servers.</p>
-<p>🌐 Accessing the Application:
-Expose container ports to access apps via browser or API.</p>
-<p>📅 Day 6 — Tagging &amp; ECR Authentication
-🏷️ Docker Image Tagging
-If image was created without proper name (e.g., missing registry/repo), use:</p>
-<p>bash
-Copy code
-docker tag oldimagename:tag newregistry/repository:newtag
-You can see multiple names, but the Image ID remains the same.</p>
-<p>🔐 Docker Login to ECR
-To authenticate with ECR registry:</p>
-<p>Go to ECR repo</p>
-<p>Click View Push Commands</p>
-<p>Use the first command (requires AWS CLI):</p>
-<p>bash
-Copy code
-aws ecr get-login-password --region <region> | \
-docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.<region>.amazonaws.com
-Must be executed on Docker build server.</p>
-<p>🛡️ ECR Security Features:
-🔐 Tag Immutability:
-Prevents overwriting existing image versions.</p>
-<p>Enable this to ensure image stability.</p>
-<p>Same concept applies to Nexus.</p>
-<p>🔍 Scan on Push:
-Automatically checks for vulnerabilities when image is pushed.</p>
-<p>🔐 KMS Encryption:
-Encrypt images stored in ECR using AWS KMS.</p>
-<p>🛂 IAM Role &amp; AWS CLI Access
-✅ For Docker Build Server:
-Create and attach IAM policy with full ECR access.</p>
-<p>Install AWS CLI.</p>
-<p>Authenticate before push.</p>
-<p>🔁 Note:
-Token is valid for 4 hours → must re-authenticate frequently.</p>
-<p>✅ For Deployment Server:
-Install AWS CLI.</p>
-<p>Attach read-only IAM policy.</p>
-<p>Authenticate and pull images.</p>
-<p>yaml</p>
 
 
 
