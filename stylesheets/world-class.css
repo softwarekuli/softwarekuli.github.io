@@ -1,0 +1,718 @@
+/* ==========================================
+   WORLD-CLASS #1 PORTFOLIO DESIGN SYSTEM
+   Next-Generation Premium Design
+   ========================================== */
+
+:root {
+  /* ========== COLOR PALETTE ========== */
+  --primary-dark: #0a0e27;
+  --primary-light: #1a1f3a;
+  --accent-primary: #6366f1;
+  --accent-secondary: #ec4899;
+  --accent-tertiary: #06b6d4;
+  --accent-quaternary: #f59e0b;
+  
+  /* Text Colors */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-accent: #06b6d4;
+  
+  /* Surface Colors */
+  --surface-primary: #0f172a;
+  --surface-secondary: #1e293b;
+  --surface-tertiary: #334155;
+  --glass-light: rgba(255, 255, 255, 0.08);
+  --glass-dark: rgba(0, 0, 0, 0.3);
+  
+  /* Borders */
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-dark: rgba(0, 0, 0, 0.2);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 60px rgba(99, 102, 241, 0.4);
+  --shadow-glow-secondary: 0 0 40px rgba(6, 182, 212, 0.3);
+  
+  /* Transitions */
+  --transition-fast: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 800ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ========================================
+   BASE STYLES & GLOBAL
+   ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #0f172a 50%, #1a0f3a 100%);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.4px;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   ENHANCED TYPOGRAPHY SYSTEM
+   ========================================  */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  background: linear-gradient(135deg, 
+    var(--accent-primary) 0%, 
+    var(--accent-secondary) 50%, 
+    var(--accent-tertiary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--text-primary);
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+h2::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  opacity: 0.5;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 3px;
+  animation: slideInRight 0.8s ease-out;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+h4 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.3px;
+}
+
+strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  position: relative;
+  font-weight: 600;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transition: width var(--transition-base);
+  border-radius: 1px;
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   HERO SECTION - WORLD CLASS
+   ======================================== */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin: 4rem 0 6rem 0;
+  padding: 4rem 0;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  animation: fadeInLeft 0.9s ease-out;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+  border-radius: 30px;
+  opacity: 0.1;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  inset: -15px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) 1;
+  border-radius: 25px;
+  opacity: 0.3;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  transition: all var(--transition-slow);
+  z-index: 1;
+  position: relative;
+}
+
+.hero-image img:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 30px 60px rgba(99, 102, 241, 0.5);
+}
+
+.hero-text {
+  animation: fadeInRight 0.9s ease-out 0.1s both;
+}
+
+.hero-text h3 {
+  font-size: 1.3rem;
+  color: var(--text-accent);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cta:not(.ghost) {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  color: white;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.cta:not(.ghost):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+}
+
+.cta.ghost {
+  border: 2px solid var(--accent-primary);
+  color: var(--accent-primary);
+  background: transparent;
+}
+
+.cta.ghost:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   SECTION STYLES
+   ======================================== */
+
+section {
+  margin: 6rem 0;
+  padding: 0;
+}
+
+section > h2:first-child {
+  margin-top: 0;
+}
+
+/* What I Do Section */
+.what-i-do {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.what-i-do > div {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(6, 182, 212, 0.05));
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
+}
+
+.what-i-do > div:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border-color: var(--accent-primary);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.1));
+}
+
+.what-i-do > div p {
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
+/* Experience & Achievements */
+.experience-section,
+.achievements-section,
+.skills-section {
+  margin: 4rem 0;
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(236, 72, 153, 0.05));
+  padding: 2.25rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  text-align: center;
+  transition: all var(--transition-base);
+  backdrop-filter: blur(10px);
+}
+
+.achievement-card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: var(--shadow-xl), var(--shadow-glow-secondary);
+  border-color: var(--accent-secondary);
+}
+
+.achievement-card h4 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.skill-badge {
+  background: linear-gradient(135deg, var(--surface-secondary), var(--surface-tertiary));
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.skill-badge:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-primary);
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.2), 
+    rgba(6, 182, 212, 0.15));
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80px;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.15;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========================================
+   TABLES & CODE BLOCKS
+   ======================================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+thead {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.1));
+  border-bottom: 2px solid var(--accent-primary);
+}
+
+th {
+  padding: 1.25rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 1rem;
+}
+
+tbody tr:hover {
+  background: rgba(99, 102, 241, 0.08);
+}
+
+code {
+  background: var(--surface-secondary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: var(--accent-tertiary);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-light);
+}
+
+pre {
+  background: var(--surface-primary);
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-lg);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   LISTS
+   ======================================== */
+
+ul, ol {
+  margin: 1.5rem 0;
+  padding-left: 2.5rem;
+}
+
+li {
+  margin: 0.75rem 0;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+li strong {
+  color: var(--text-primary);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 2rem 0 4rem 0;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-row {
+    gap: 1rem;
+  }
+  
+  .cta {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .cta {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* ========================================
+   DARK MODE ENHANCEMENTS
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #0a0e27 0%, #0f0a2e 50%, #1a0f3a 100%);
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .cta-row,
+  .contact-section {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+}
