@@ -762,6 +762,13 @@ li strong {
   margin-bottom: 1.25rem;
 }
 
+.hero-welcome {
+  color: var(--portfolio-muted);
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
 .hero-text h2 {
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1.02;
@@ -1047,6 +1054,10 @@ body {
   letter-spacing: 0;
   line-height: 1.4;
   margin-bottom: 3rem;
+}
+
+.hero-welcome {
+  margin-bottom: 0.75rem;
 }
 
 .hero-text h2 {
