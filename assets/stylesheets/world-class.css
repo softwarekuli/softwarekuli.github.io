@@ -189,6 +189,33 @@ a:hover::after {
   width: 100%;
 }
 
+.md-tabs__list {
+  gap: 0.25rem;
+}
+
+.md-tabs__link {
+  white-space: nowrap;
+}
+
+a:focus-visible,
+button:focus-visible,
+label:focus-visible {
+  outline: 3px solid var(--accent-quaternary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .md-tabs__list {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .md-tabs__link {
+    flex-shrink: 0;
+  }
+}
+
 /* ========================================
    HERO SECTION - WORLD CLASS
    ======================================== */
