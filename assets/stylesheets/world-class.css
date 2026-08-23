@@ -21,6 +21,12 @@
   /* Surface Colors */
   --surface-primary: #0f172a;
   --surface-secondary: #1e293b;
+.md-content .md-typeset a:not(.cta):not(.route-card) {
+  color: var(--portfolio-teal-dark);
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 143, 131, 0.35);
+  text-underline-offset: 0.18em;
+}
   --surface-tertiary: #334155;
   --glass-light: rgba(255, 255, 255, 0.08);
   --glass-dark: rgba(0, 0, 0, 0.3);
